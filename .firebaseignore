@@ -1,0 +1,19 @@
+.git
+.gitignore
+.DS_Store
+firebase-debug.log
+firebase-debug.*.log
+
+# Local dependencies and caches
+**/node_modules/**
+**/.npm-cache/**
+**/.cache/**
+
+# Next.js build artifacts
+web/.next/**
+web/out/**
+
+# Local env and temporary files
+**/.env*.local
+**/*.tmp
+**/*.log
