@@ -67,3 +67,7 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# local development artifacts
+.DS_Store
+web/.npm-cache/
