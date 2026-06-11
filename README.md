@@ -1,36 +1,39 @@
 # Salvage Cars Business
-This project uses `web/` as the single source of truth for the site.
+This project is currently a static HTML site served from `public/`.
 
-## Source of truth and sync process
-- `web/` contains the Next.js application code and assets.
-- Firebase Hosting is configured to use `web` as its source in `firebase.json`.
-- The old root `public/` folder was removed and should not be recreated.
-- When running Firebase locally or deploying, Firebase builds from `web/` and serves generated output from `.firebase/salvage-cars-business/hosting` (build artifact).
+## Source of truth
+- All live site pages are stored in `public/`.
+- Firebase Hosting is configured in `firebase.json` with:
+  - `"public": "public"`
+- There is no active `web/` build step in the current workflow.
 
-## Development workflow
-Run all commands from the repository root unless noted.
+## Directory structure
+- `public/index.html` → homepage
+- `public/guides/.../index.html` → guide pages
+- `public/categories/index.html` → categories landing page
+- `public/privacy/index.html` and `public/terms/index.html` → legal placeholders
 
-1. Install dependencies (first time or after dependency changes):
-   - `npm --prefix web install`
-2. Run the Next.js development server:
-   - `npm --prefix web run dev`
-   - Open `http://localhost:3000`
-3. Validate production build:
-   - `npm --prefix web run build`
+## Local development workflow
+Run commands from the repository root:
 
-## Local Firebase preview (deployment-like check)
-Use this to verify what Hosting will serve:
+1. Start local hosting:
+   - `firebase serve --only hosting`
+2. Open the local URL shown in terminal (commonly `http://localhost:5000`).
+3. Edit HTML files in `public/` and refresh the browser.
 
-1. Start local hosting preview:
-   - `firebase serve`
-2. Open:
-   - `http://localhost:5002`
-
-## Publish workflow
+## Publishing workflow
 When ready to publish:
-
 - `firebase deploy --only hosting`
 
+## Adding new pages
+For clean URLs, use folder routes:
+- Create `public/your-path/index.html`
+- Link to `/your-path` from other pages
+
+Example:
+- File: `public/guides/new-guide/index.html`
+- URL: `/guides/new-guide`
+
 ## Notes
-- Make content/style/code changes under `web/` (for example `web/app` and `web/public`).
-- If Next reports another dev server is already running, stop the existing process before starting a new one.
+- If a link returns 404, confirm there is a matching file path under `public/`.
+- Keep placeholder legal pages updated before production launch.
