@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture | SalvageCars.com</title>
+  <meta name="description" content="SalvageCars.com Product Architecture v1.0 — how the platform is organized, the types of content it provides, and the principles used when adding new features.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+  <header class="max-w-4xl mx-auto px-6 py-8">
+    <a href="/" class="text-sm font-semibold text-blue-600 hover:underline">← Back to Home</a>
+    <h1 class="mt-4 text-4xl font-black">SalvageCars.com Product Architecture</h1>
+    <p class="mt-2 text-sm text-slate-500">Version 1.0 &mdash; Status: Draft</p>
+    <p class="mt-1 text-sm text-slate-500">Related: <a href="/vision" class="text-blue-600 hover:underline">Vision</a></p>
+    <p class="mt-4 text-lg text-slate-600">This document describes the structure and organization of SalvageCars.com — how the platform is organized, the types of content it provides, the relationships between pages, and the guiding principles used when adding new features.</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 pb-20">
+    <article class="space-y-8 rounded-2xl bg-white p-8 shadow">
+
+      <section>
+        <h2 class="text-2xl font-bold">Purpose</h2>
+        <p class="mt-2 text-slate-700">This document describes the structure and organization of SalvageCars.com. It defines how the platform is organized, the types of content it provides, the relationships between pages, and the guiding principles used when adding new features.</p>
+        <p class="mt-3 text-slate-700">This document is intended to evolve over time as the platform grows.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Product Overview</h2>
+        <p class="mt-2 text-slate-700">SalvageCars.com is a decision-support platform dedicated to helping people understand, purchase, rebuild, own, and sell salvage and rebuilt vehicles.</p>
+        <p class="mt-3 text-slate-700">The platform combines educational content, official government resources, practical tools, and future interactive features to help visitors make informed decisions.</p>
+        <p class="mt-3 text-slate-700">Rather than simply publishing articles, SalvageCars.com is designed as an interconnected knowledge platform where every page supports related content and helps answer the visitor's next question.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Product Goals</h2>
+        <p class="mt-2 text-slate-700">The primary goals of SalvageCars.com are to:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-700">
+          <li>Become the most trusted online resource for salvage vehicles</li>
+          <li>Help visitors avoid expensive mistakes</li>
+          <li>Explain complex information in plain language</li>
+          <li>Organize information that is currently scattered across multiple sources</li>
+          <li>Reference official government resources whenever possible</li>
+          <li>Build tools that help users make informed decisions</li>
+          <li>Grow sustainably while maintaining editorial independence</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Core User Groups</h2>
+
+        <div class="mt-4 space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold">First-Time Buyer</h3>
+            <ul class="mt-2 list-disc space-y-1 pl-6 text-slate-700">
+              <li>Beginner guides</li>
+              <li>Auction education</li>
+              <li>Repair cost guidance</li>
+              <li>State title information</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Experienced Rebuilder</h3>
+            <ul class="mt-2 list-disc space-y-1 pl-6 text-slate-700">
+              <li>Quick reference materials</li>
+              <li>State regulations</li>
+              <li>Inspection requirements</li>
+              <li>Auction resources</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Vehicle Owner</h3>
+            <ul class="mt-2 list-disc space-y-1 pl-6 text-slate-700">
+              <li>Information after an insurance total loss</li>
+              <li>Salvage title process</li>
+              <li>Rebuilt title process</li>
+              <li>Selling branded vehicles</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Automotive Businesses</h3>
+            <p class="mt-2 text-slate-700">Examples include repair shops, dealers, transport companies, and parts suppliers. Future versions of SalvageCars.com may provide tools and directories useful to these users.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Product Areas</h2>
+        <p class="mt-2 text-slate-700">The platform is organized into several primary areas.</p>
+
+        <div class="mt-4 space-y-5">
+          <div>
+            <h3 class="text-lg font-semibold">Home</h3>
+            <p class="mt-1 text-slate-700">Introduces the platform and provides navigation to all major content areas.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Guides</h3>
+            <p class="mt-1 text-slate-700">Educational content explaining buying salvage vehicles, auctions, repairs, insurance, vehicle titles, registration, and rebuilding.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">State Information</h3>
+            <p class="mt-1 text-slate-700">A dedicated section for every U.S. state. Each state page provides salvage terminology, rebuilt title terminology, inspection requirements, registration process, official DMV links, frequently asked questions, and related guides.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Categories</h3>
+            <p class="mt-1 text-slate-700">Content organized by vehicle type and buying intent. Examples: Salvage Cars, Trucks, SUVs, Motorcycles, Flood Vehicles, Theft Recovery Vehicles.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Tools</h3>
+            <p class="mt-1 text-slate-700">Interactive resources that assist decision making, including a Repair Cost Calculator, Auction Fee Calculator, ROI Calculator, VIN Resources, and a future AI Damage Estimator.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Legal</h3>
+            <p class="mt-1 text-slate-700">Privacy Policy, Terms of Service, Disclaimers, and Affiliate Disclosure.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">About</h3>
+            <p class="mt-1 text-slate-700">Mission, Vision, editorial standards, and contact information.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Information Architecture</h2>
+        <p class="mt-2 text-slate-700">Every page should connect visitors to additional relevant information. Example relationships:</p>
+        <ul class="mt-3 list-disc space-y-1 pl-6 text-slate-700">
+          <li>Guide → Related State Pages → Related Tools → Related Categories → Frequently Asked Questions → Official Resources</li>
+        </ul>
+        <p class="mt-3 text-slate-700">Visitors should never reach a dead end. Every page should answer: <span class="italic">"What should I read next?"</span></p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Navigation Principles</h2>
+        <p class="mt-2 text-slate-700">Navigation should be simple and predictable. Primary navigation should remain consistent across the platform. Future navigation may include:</p>
+        <ul class="mt-3 list-disc space-y-1 pl-6 text-slate-700">
+          <li>Home</li>
+          <li>Guides</li>
+          <li>States</li>
+          <li>Tools</li>
+          <li>Categories</li>
+          <li>About</li>
+          <li>Search</li>
+          <li>Contact</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Page Types</h2>
+
+        <div class="mt-4 space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold">Guide Page</h3>
+            <p class="mt-1 text-slate-600 text-sm">Contains: Title, Summary, Table of Contents, Main content, Key Takeaways, Frequently Asked Questions, Related Guides, Related States, Official Sources, Last Reviewed Date.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">State Page</h3>
+            <p class="mt-1 text-slate-600 text-sm">Contains: State Overview, Terminology Table, Inspection Process, Registration Requirements, Official DMV Resources, Frequently Asked Questions, Related Guides, Last Reviewed Date.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Tool Page</h3>
+            <p class="mt-1 text-slate-600 text-sm">Contains: Tool Description, Interactive Tool, Explanation, Assumptions and Limitations, Related Guides, Related States.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">Category Page</h3>
+            <p class="mt-1 text-slate-600 text-sm">Contains: Overview, Buying Tips, Related Guides, Related Tools, Frequently Asked Questions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Technical Direction</h2>
+        <p class="mt-2 text-slate-700">Version 1 prioritizes:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-700">
+          <li>Fast-loading static pages</li>
+          <li>Firebase Hosting</li>
+          <li>Clean URLs</li>
+          <li>Search engine optimization</li>
+          <li>Accessible HTML</li>
+          <li>Mobile-friendly design</li>
+        </ul>
+        <p class="mt-3 text-slate-700">As the platform grows, reusable templates, structured data, and content generation may be introduced without changing the visitor experience. Future implementation details will be documented separately.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Version 1 Scope</h2>
+        <p class="mt-2 text-slate-700">Version 1 includes:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-700">
+          <li>Homepage</li>
+          <li>About page</li>
+          <li>Vision page</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Contact page</li>
+          <li>Initial guide library</li>
+          <li>State information section</li>
+          <li>State comparison table</li>
+          <li>Initial repair calculator</li>
+          <li>Consistent navigation</li>
+          <li>Search engine optimization</li>
+          <li>Responsive design</li>
+        </ul>
+        <p class="mt-3 text-slate-700">Affiliate integrations may be added after sufficient content and traffic have been established.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Future Roadmap</h2>
+        <p class="mt-2 text-slate-700">Future versions may include:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-700">
+          <li>AI-assisted repair estimation</li>
+          <li>VIN-based tools</li>
+          <li>Dealer directory</li>
+          <li>Transport directory</li>
+          <li>User accounts</li>
+          <li>Saved vehicles</li>
+          <li>Personalized recommendations</li>
+          <li>Marketplace integrations</li>
+          <li>Community features</li>
+        </ul>
+        <p class="mt-3 text-slate-700">These items are intentionally outside the scope of Version 1.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Architecture Principles</h2>
+        <p class="mt-2 text-slate-700">Every addition to SalvageCars.com should satisfy the following questions:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-700">
+          <li>Is it useful?</li>
+          <li>Is it maintainable?</li>
+          <li>Does it make the platform stronger?</li>
+        </ul>
+        <p class="mt-3 text-slate-700">Features that do not meet these criteria will be reconsidered.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold">Definition of Success</h2>
+        <p class="mt-2 text-slate-700">Success is not measured solely by traffic or revenue. SalvageCars.com succeeds when:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-700">
+          <li>Visitors make better decisions</li>
+          <li>People avoid costly mistakes</li>
+          <li>Information is trusted and shared</li>
+          <li>Official resources are easy to find</li>
+          <li>Visitors return because they found genuine value</li>
+          <li>The platform continues to grow without sacrificing quality or trust</li>
+        </ul>
+        <p class="mt-3 text-slate-700">Our goal is for SalvageCars.com to be the answer if someone asks, "Where can I learn about salvage vehicles?"</p>
+      </section>
+
+    </article>
+  </main>
+</body>
+</html>
