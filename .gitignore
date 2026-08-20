@@ -71,3 +71,7 @@ node_modules/
 # local development artifacts
 .DS_Store
 web/.npm-cache/
+
+# Source document files (Pages, RTF)
+*.pages
+*.rtf
