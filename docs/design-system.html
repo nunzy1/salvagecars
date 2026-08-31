@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System | SalvageCars.com</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-900">
+
+<header class="max-w-5xl mx-auto pt-16 pb-8 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
+    SalvageCars.com Design System
+  </h1>
+
+  <p class="text-lg text-slate-600">
+    Internal Design Document
+  </p>
+
+  <div class="mt-6 text-sm text-slate-500">
+    <strong>Status:</strong> Draft &nbsp; | &nbsp;
+    <strong>Version:</strong> 0.2
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 pb-20">
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">1. Purpose</h2>
+
+    <p class="mb-4">
+      This document defines the visual and interaction standards used throughout
+      SalvageCars.com.
+    </p>
+
+    <p class="mb-4">
+      Its purpose is to create an experience that is clear, consistent,
+      trustworthy, accessible, easy to scan, easy to navigate, and useful
+      across devices.
+    </p>
+
+    <p class="mb-4">
+      The design system supports the product architecture and the user journeys
+      defined elsewhere in the project documentation. It does not redefine the
+      site's information architecture, navigation model, content strategy, or
+      repository structure.
+    </p>
+
+    <p>
+      The design system should remain intentionally lightweight. New visual
+      patterns and components should be introduced when they solve a recurring
+      user, content, or interaction need.
+    </p>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">2. Document Boundaries</h2>
+
+    <p class="mb-4">
+      To avoid duplication across internal project documentation, each document
+      has a distinct responsibility.
+    </p>
+
+    <ul class="list-disc ml-8 space-y-3">
+      <li>
+        <strong>Product Architecture</strong> defines the major product concepts,
+        capabilities, and how the platform can evolve.
+      </li>
+      <li>
+        <strong>Site Structure &amp; User Navigation</strong> defines information
+        organization, Jobs To Be Done (JTBD), user journeys, navigation, internal
+        linking, and how visitors move through the site.
+      </li>
+      <li>
+        <strong>Repository Architecture</strong> defines where source files and
+        internal documentation belong in the repository.
+      </li>
+      <li>
+        <strong>Design System</strong> defines how information and interactions
+        are presented visually and behaviorally.
+      </li>
+      <li>
+        <strong>Content Standards</strong>, when created, will define how
+        SalvageCars.com content is written, including voice, terminology,
+        editorial conventions, and writing guidance.
+      </li>
+    </ul>
+
+    <p class="mt-5">
+      When another project document already owns a concept, this document should
+      reference that concept rather than reproduce it.
+    </p>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">3. Design Principles</h2>
+
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.1 Clarity Over Decoration</h3>
+        <p class="mb-4">
+          SalvageCars.com prioritizes understanding over visual decoration.
+        </p>
+        <p class="mb-4">Design should help visitors:</p>
+        <ul class="list-disc ml-8 space-y-2">
+          <li>Understand information.</li>
+          <li>Recognize important information.</li>
+          <li>Find answers.</li>
+          <li>Compare information.</li>
+          <li>Make decisions.</li>
+          <li>Determine what to do next.</li>
+        </ul>
+        <p class="mt-4">
+          Decoration should never compete with content. Pages should rely on
+          typography, whitespace, hierarchy, and organization before decorative
+          effects.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.2 Design Supports Content</h3>
+        <p class="mb-4">
+          Visual design should make information easier to understand and use.
+        </p>
+        <p>
+          Content should not be forced into a component simply because that
+          component exists. A page does not require cards, illustrations, icons,
+          or callouts unless they improve comprehension, navigation, or
+          interaction.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.3 Accessibility Is a Foundation</h3>
+        <p class="mb-4">
+          Accessibility is part of the design process from the beginning.
+          SalvageCars.com should aim to conform to WCAG 2.2 Level AA.
+        </p>
+
+        <p class="mb-4">Design and implementation should consider:</p>
+
+        <ul class="list-disc ml-8 space-y-2">
+          <li>Sufficient color contrast.</li>
+          <li>Readable font sizes and line spacing.</li>
+          <li>Comfortable line lengths.</li>
+          <li>Keyboard navigation.</li>
+          <li>Visible keyboard focus.</li>
+          <li>Semantic heading structure.</li>
+          <li>Descriptive links and controls.</li>
+          <li>Adequate touch-target sizes.</li>
+          <li>Screen-reader compatibility.</li>
+          <li>Zoom and text resizing.</li>
+          <li>Reduced-motion preferences.</li>
+          <li>Information that does not depend on color alone.</li>
+        </ul>
+
+        <p class="mt-4">
+          Accessibility requirements should influence component design before
+          implementation rather than being added as a final correction.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.4 Consistency Builds Trust</h3>
+        <p class="mb-4">
+          Similar information and actions should look and behave similarly
+          throughout the site.
+        </p>
+
+        <p>
+          Visitors should be able to learn the site's visual language naturally.
+          For example, official sources, warnings, links, navigation, and other
+          recurring patterns should use predictable treatments.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.5 Authority Should Be Clear</h3>
+
+        <p class="mb-4">
+          SalvageCars.com combines plain-language guidance with authoritative
+          external information. The interface should make that distinction clear.
+        </p>
+
+        <p class="mb-4">
+          SalvageCars.com guidance may include explanations, summaries,
+          educational material, and decision guidance.
+        </p>
+
+        <p class="mb-4">
+          Official information may include state motor vehicle agencies,
+          statutes, regulations, government forms, and other primary sources.
+        </p>
+
+        <p>
+          Official-source links should eventually use a consistent visual
+          treatment. The design must never imply that SalvageCars.com is a
+          government agency or that its guidance replaces official requirements.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.6 Design Supports User Journeys</h3>
+
+        <p class="mb-4">
+          Jobs To Be Done, user questions, navigation paths, and user journeys
+          are defined in <em>Site Structure &amp; User Navigation</em>.
+        </p>
+
+        <p>
+          The design system should make those paths easy to recognize and follow,
+          but they must not depend on a particular visual component. A JTBD path
+          may be presented as a text link, heading, list, card, or another
+          accessible interface pattern without changing the underlying journey.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.7 Progressive Enhancement</h3>
+
+        <p>
+          Core information and navigation should remain usable without
+          unnecessary reliance on complex interfaces. Enhancements may improve
+          the experience, but essential information should not depend on them
+          when a simpler accessible approach is practical.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">3.8 Mobile Is Not Secondary</h3>
+
+        <p>
+          Pages should work well on small screens as well as large displays.
+          Content hierarchy must remain understandable when layouts collapse
+          into a single column, and important information should not require
+          horizontal scrolling except where unavoidable for specialized
+          structured content.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">4. Visual Foundations</h2>
+
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.1 Overall Visual Direction</h3>
+
+        <p class="mb-4">
+          The visual character of SalvageCars.com should be:
+        </p>
+
+        <p class="font-semibold mb-4">
+          Clean. Calm. Practical. Authoritative. Approachable.
+        </p>
+
+        <p class="mb-4">The site should avoid appearing:</p>
+
+        <ul class="list-disc ml-8 space-y-2">
+          <li>Busy.</li>
+          <li>Aggressively commercial.</li>
+          <li>Overly promotional.</li>
+          <li>Automotive-themed for decoration alone.</li>
+          <li>Visually intimidating.</li>
+          <li>Like an auction marketplace when presenting educational information.</li>
+        </ul>
+
+        <p class="mt-4">
+          Information should have enough visual space to be read and understood
+          comfortably.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.2 Typography</h3>
+
+        <p class="mb-4">
+          Typography should optimize readability before visual distinctiveness.
+          The system should use as few typefaces and font weights as practical.
+        </p>
+
+        <h4 class="font-semibold mb-2">Body text</h4>
+        <ul class="list-disc ml-8 space-y-2 mb-5">
+          <li>Must be comfortably readable without zooming under normal conditions.</li>
+          <li>Should use generous line spacing.</li>
+          <li>Must maintain sufficient contrast against its background.</li>
+          <li>Should avoid excessively wide lines.</li>
+          <li>Long-form content should generally target approximately 60–75 characters per line.</li>
+        </ul>
+
+        <h4 class="font-semibold mb-2">Headings</h4>
+        <p class="mb-4">
+          Headings should establish hierarchy primarily through size, weight,
+          and spacing rather than color alone. Heading levels should follow the
+          semantic structure of the page.
+        </p>
+
+        <h4 class="font-semibold mb-2">Emphasis</h4>
+        <p>
+          Bold text should be used selectively. Underlining should generally
+          remain associated with links so that link recognition stays clear.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.3 Spacing</h3>
+
+        <p class="mb-4">
+          Whitespace is a functional part of the interface. It should separate
+          unrelated concepts, group related information, improve scanning, and
+          establish hierarchy.
+        </p>
+
+        <p>
+          A consistent spacing scale should be used instead of arbitrary values.
+          Related elements should appear visually closer together than unrelated
+          elements.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.4 Content Width</h3>
+
+        <p class="mb-4">
+          Long-form content should not stretch across the full width of large
+          screens. Article and guide text should use a comfortable maximum
+          reading width.
+        </p>
+
+        <p>
+          Wider layouts may be used where the information requires them, such as
+          navigation, state indexes, structured comparisons, tables, and tool
+          interfaces.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.5 Color</h3>
+
+        <p class="mb-4">
+          Color should have a functional purpose. The initial palette should
+          remain restrained and provide colors for primary text, secondary text,
+          page backgrounds, surfaces, borders, links and actions, success,
+          warnings, errors, and informational states.
+        </p>
+
+        <p class="mb-4">
+          Meaningful text and controls must meet the appropriate WCAG contrast
+          requirements.
+        </p>
+
+        <p>
+          Color must not be the only method used to communicate meaning. A
+          warning, for example, should also be identifiable through text,
+          labeling, structure, or another non-color indicator.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.6 Borders, Shadows, and Depth</h3>
+
+        <p>
+          Prefer subtle borders and spacing before shadows when separating
+          content regions. Shadows should be used sparingly and should
+          communicate interface relationships rather than decoration.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">4.7 Corners</h3>
+
+        <p>
+          Corner rounding should be subtle and consistent. The site should feel
+          modern without relying on exaggerated rounding or other short-lived
+          visual trends.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">5. Information Hierarchy</h2>
+
+    <p class="mb-6">
+      This section defines the visual hierarchy of content. Editorial rules for
+      writing headings, paragraphs, terminology, warnings, links, and other
+      content belong in <em>Content Standards</em>.
+    </p>
+
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.1 Page Hierarchy</h3>
+
+        <p>
+          Pages should establish a clear visual progression from primary
+          information to supporting information. The page title and main purpose
+          should be immediately recognizable, while secondary details and
+          metadata should remain visually subordinate.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.2 Page Titles and Headings</h3>
+
+        <p>
+          Each page should have one visually dominant primary heading.
+          Subsequent heading levels should create an obvious, consistent
+          hierarchy that remains understandable when the page is scanned.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.3 Body Content</h3>
+
+        <p>
+          Paragraph spacing, list spacing, text width, and line height should
+          make long-form information comfortable to read and easy to scan.
+          Dense uninterrupted blocks of content should be avoided through
+          appropriate structural hierarchy.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.4 Emphasized Information</h3>
+
+        <p>
+          Important information may receive stronger visual treatment when
+          additional attention improves comprehension or safety. Not every useful
+          fact should become a callout; overuse reduces hierarchy and makes pages
+          harder to scan.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.5 Official Sources</h3>
+
+        <p>
+          Official sources should have a recognizable and consistent visual
+          treatment that identifies them as authoritative external information
+          without making them compete with the page's primary content.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.6 Metadata</h3>
+
+        <p>
+          Metadata such as last-reviewed dates, state labels, content types, or
+          source authorities should remain visually secondary while still being
+          easy to locate when relevant.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-3">5.7 Contextual Next Steps</h3>
+
+        <p>
+          When a page offers a next step, the interface should make that action
+          easy to identify without turning informational content into a
+          promotional experience. The underlying user journey is defined in
+          <em>Site Structure &amp; User Navigation</em>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">6. Component Independence</h2>
+
+    <p class="mb-4">
+      Information architecture and user journeys must not depend on a particular
+      visual component.
+    </p>
+
+    <p class="mb-4">
+      For example, a path such as <em>I need my state's salvage requirements</em>
+      may initially appear as a simple text link and later be presented as a card
+      containing additional context.
+    </p>
+
+    <p>
+      The underlying destination and user journey remain the same. This allows
+      SalvageCars.com to launch useful experiences before every possible
+      component has been developed.
+    </p>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">7. Design System Evolution</h2>
+
+    <p class="mb-4">
+      This document is a living standard and should become the authoritative
+      source for SalvageCars.com visual and interaction decisions.
+    </p>
+
+    <p class="mb-4">
+      As decisions are made, this document may be expanded to include exact
+      typography specifications, colors, spacing values, content widths,
+      responsive breakpoints, Tailwind implementation conventions, links,
+      buttons, callouts, tables, forms, navigation patterns, and reusable
+      components such as cards.
+    </p>
+
+    <p class="mb-4">
+      Components should be added when recurring needs emerge from real content
+      and user journeys.
+    </p>
+
+    <p class="font-semibold mb-6">
+      Need → Pattern → Standardize → Reuse
+    </p>
+
+    <div class="border-l-4 border-slate-400 pl-5 py-1">
+      <p class="font-semibold">
+        Clarity over decoration. Consistency builds trust. Design helps visitors
+        understand their situation and know what to do next.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
