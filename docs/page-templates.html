@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Templates | SalvageCars.com</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a:focus-visible{outline:3px solid #2563eb;outline-offset:3px;border-radius:6px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+<header class="border-b border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-6 md:px-8">
+    <p class="text-sm font-semibold text-slate-500">Internal documentation</p>
+    <h1 class="mt-2 text-[34px] font-extrabold leading-[1.15] tracking-tight md:text-[40px]">Page Templates</h1>
+    <p class="mt-4 max-w-3xl text-[18px] leading-8 text-slate-600">
+      Reusable page structures for SalvageCars.com. These templates define information hierarchy,
+      required and optional sections, and visual patterns. They are internal standards, not public pages.
+    </p>
+  </div>
+</header>
+
+<main class="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16">
+
+<section class="max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Guide Page Template</h2>
+  <p class="mt-5 text-[18px] leading-[1.65] text-slate-700">
+    The Guide Page template is based on the production <code class="rounded bg-white px-1.5 py-0.5 text-[16px]">how-to-buy-a-salvage-car</code>
+    guide. Its job is to answer a question, establish context, explain the subject, connect relevant state information when appropriate,
+    and help the visitor understand what to do next.
+  </p>
+
+  <div class="mt-8 rounded-md border border-slate-200 bg-white p-6 md:p-8">
+    <h3 class="text-[22px] font-bold leading-snug">Core principle</h3>
+    <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+      A Guide Page should not behave like a generic blog post. It should function as a decision-support page:
+      <strong class="font-semibold text-slate-900">question → answer → explanation → context → next decision.</strong>
+    </p>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Required page anatomy</h2>
+  <div class="mt-7 space-y-8">
+    <div><h3 class="text-[20px] font-bold">1. Breadcrumb</h3><p class="mt-2 text-[17px] leading-7 text-slate-600">Orient the visitor within the site hierarchy. Use: Home → Guides → Current Guide.</p></div>
+    <div><h3 class="text-[20px] font-bold">2. H1 and lead</h3><p class="mt-2 text-[17px] leading-7 text-slate-600">State the topic or user question plainly. Follow with a concise lead that explains what the reader will understand, evaluate, or decide. The lead may use one or two short paragraphs.</p></div>
+    <div><h3 class="text-[20px] font-bold">3. “What you should know”</h3><p class="mt-2 text-[17px] leading-7 text-slate-600">Give the reader the essential answer near the top of the page. Do not require the visitor to read the entire guide before learning the main conclusion or decision factors.</p></div>
+    <div><h3 class="text-[20px] font-bold">4. Main explanatory sections</h3><p class="mt-2 text-[17px] leading-7 text-slate-600">Organize the body around the actual decisions, risks, concepts, or steps the visitor needs to understand. Section count and headings vary by guide.</p></div>
+    <div><h3 class="text-[20px] font-bold">5. “What should I do next?”</h3><p class="mt-2 text-[17px] leading-7 text-slate-600">End the main decision path with concrete next actions or questions. Link to another SalvageCars.com page when a useful destination exists. Do not create placeholder links merely to satisfy the template.</p></div>
+    <div><h3 class="text-[20px] font-bold">6. Related guides</h3><p class="mt-2 text-[17px] leading-7 text-slate-600">Provide a small number of relevant next-reading options, normally two or three. Prefer usefulness over volume.</p></div>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Conditional sections</h2>
+  <div class="mt-7 space-y-8">
+    <div>
+      <h3 class="text-[20px] font-bold">State Guidance connection</h3>
+      <p class="mt-2 text-[17px] leading-7 text-slate-600">Include when state law, title terminology, inspections, rebuilding, registration, or other state-specific requirements materially affect the answer.</p>
+      <div class="mt-4 rounded-md border border-slate-200 bg-white p-5">
+        <p class="font-semibold">Pattern: “Your state matters”</p>
+        <p class="mt-2 text-[16px] leading-7 text-slate-600">Explain why the visitor must verify state-specific requirements, then link to <code>/states/</code>.</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-[20px] font-bold">Official sources</h3>
+      <p class="mt-2 text-[17px] leading-7 text-slate-600">Include when authoritative sources materially support the guide. Prefer government agencies, statutes, administrative rules, and official programs.</p>
+      <p class="mt-3 text-[17px] leading-7 text-slate-600">When a useful external service may charge visitors, explain what the service is, state that a fee may apply, disclose lack of affiliation when appropriate, and link to an authoritative landing page rather than selecting a commercial provider for the visitor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Visual pattern</h2>
+  <p class="mt-5 text-[18px] leading-[1.65] text-slate-700">Guide pages should feel like a natural extension of Homepage V2: spacious, restrained, readable, and content-first.</p>
+  <div class="mt-7 overflow-x-auto rounded-md border border-slate-200 bg-white">
+    <table class="w-full min-w-[640px] border-collapse text-left">
+      <thead><tr class="border-b border-slate-200 bg-slate-50"><th class="px-5 py-4 text-sm font-semibold">Element</th><th class="px-5 py-4 text-sm font-semibold">Standard</th></tr></thead>
+      <tbody class="text-[16px] text-slate-700">
+        <tr class="border-b border-slate-200"><td class="px-5 py-4 font-medium text-slate-900">Reading width</td><td class="px-5 py-4">Use <code>max-w-3xl</code>.</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4 font-medium text-slate-900">Body text</td><td class="px-5 py-4">18px, approximately 1.65 line-height.</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4 font-medium text-slate-900">Major sections</td><td class="px-5 py-4">Use generous vertical spacing, typically <code>mt-12</code>.</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4 font-medium text-slate-900">Direct answer</td><td class="px-5 py-4">White bordered surface with subtle radius.</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4 font-medium text-slate-900">State callout</td><td class="px-5 py-4">White bordered surface; no decorative color treatment.</td></tr>
+        <tr><td class="px-5 py-4 font-medium text-slate-900">Related content</td><td class="px-5 py-4">Quiet bordered rows with clear titles and arrows.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Guide structure reference</h2>
+  <div class="mt-7 rounded-md border border-slate-200 bg-white p-6">
+<pre class="overflow-x-auto whitespace-pre-wrap text-[14px] leading-6 text-slate-700"><code>Breadcrumb
+
+H1
+Lead
+
+What you should know
+Direct answer
+
+Main section
+Main section
+Main section
+...
+
+[Optional] State-specific section
+    Your state matters
+    State Guidance link
+
+[Optional] Official sources
+
+What should I do next?
+    Next action/question
+    Next action/question
+    Next action/question
+
+Related guides
+    Related guide
+    Related guide
+    State Guidance, when useful
+
+Last reviewed</code></pre>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Required, recommended, and excluded elements</h2>
+  <div class="mt-7 overflow-x-auto rounded-md border border-slate-200 bg-white">
+    <table class="w-full min-w-[640px] border-collapse text-left">
+      <thead><tr class="border-b border-slate-200 bg-slate-50"><th class="px-5 py-4 text-sm font-semibold">Element</th><th class="px-5 py-4 text-sm font-semibold">Status</th></tr></thead>
+      <tbody class="text-[16px] text-slate-700">
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Breadcrumb</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">H1</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Lead</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">What you should know</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Main explanatory sections</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">State Guidance connection</td><td class="px-5 py-4">When relevant</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Official sources</td><td class="px-5 py-4">When relevant</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">What should I do next?</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Related guides</td><td class="px-5 py-4">Required</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Last reviewed</td><td class="px-5 py-4">Recommended</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Author bio</td><td class="px-5 py-4">Do not use for V1</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Reading time</td><td class="px-5 py-4">Do not use for V1</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Social sharing controls</td><td class="px-5 py-4">Do not use for V1</td></tr>
+        <tr class="border-b border-slate-200"><td class="px-5 py-4">Tags/categories</td><td class="px-5 py-4">Do not use for V1</td></tr>
+        <tr><td class="px-5 py-4">Affiliate CTA</td><td class="px-5 py-4">Do not use for V1</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl">
+  <h2 class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Relationship to other internal standards</h2>
+  <div class="mt-5 space-y-4 text-[17px] leading-7 text-slate-700">
+    <p><strong class="font-semibold text-slate-900">Design System:</strong> defines how Guide Page elements look and behave.</p>
+    <p><strong class="font-semibold text-slate-900">Content Standards:</strong> will define how titles, leads, warnings, source descriptions, link text, terminology, and other copy are written.</p>
+    <p><strong class="font-semibold text-slate-900">Site Structure &amp; User Navigation:</strong> defines where guides fit in the user journey and how visitors move between guides, State Guidance, and other site areas.</p>
+  </div>
+</section>
+
+<section class="mt-14 max-w-3xl border-t border-slate-200 pt-8">
+  <p class="text-sm text-slate-500">Status: Guide Page template approved for V1 based on the <code>how-to-buy-a-salvage-car</code> reference implementation.</p>
+</section>
+
+</main>
+</body>
+</html>
