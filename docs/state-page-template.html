@@ -1,60 +1,257 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>State Page Template | SalvageCars.com</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>body{font-family:Inter,ui-sans-serif,system-ui,sans-serif}[id]{scroll-margin-top:1.5rem}a:focus-visible{outline:3px solid #2563eb;outline-offset:3px}</style></head>
-<body class="bg-slate-50 text-slate-900 antialiased"><header class="border-b border-slate-200 bg-white"><div class="mx-auto max-w-7xl px-6 py-5 md:px-8"><p class="text-lg font-extrabold">SalvageCars.com</p><p class="mt-1 text-sm text-slate-500">Internal documentation · Page Templates</p></div></header>
-<main class="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16"><article class="max-w-3xl">
-<h1 class="text-[34px] font-extrabold leading-tight md:text-[40px]">State Page Template</h1><p class="mt-5 text-[20px] leading-8 text-slate-600">Reusable structure for SalvageCars.com state guidance pages. This is a living document, initially validated against California and New Hampshire and intended to evolve as additional states are implemented.</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>State Page Template | SalvageCars.com</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    a:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; border-radius: 6px; }
+    [id] { scroll-margin-top: 1.5rem; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <main class="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16">
+    <article class="max-w-3xl">
+      <header>
+        <p class="text-sm font-semibold uppercase tracking-wide text-slate-500">Internal template</p>
+        <h1 class="mt-3 text-[34px] font-extrabold leading-tight md:text-[40px]">State Page Template</h1>
+        <p class="mt-5 text-[18px] leading-[1.65] text-slate-700">
+          Production template validated against California, New Hampshire, Texas, Florida, and New York implementations.
+          The template remains a living document and should evolve when additional state implementations reveal a reusable content need.
+        </p>
+      </header>
 
-<section id="purpose" class="mt-12"><h2 class="text-[30px] font-bold">Purpose</h2><p class="mt-5 text-lg leading-[1.65] text-slate-700">A state page helps visitors understand how a state classifies salvage and rebuilt vehicles, whether a vehicle can return to legal road use, what process and documentation may apply, what to verify before buying, which official resources govern the process, and what to do next.</p><p class="mt-4 text-lg leading-[1.65] text-slate-700">The template provides consistency without forcing every state into the same content shape. California demonstrated a complex multi-agency process; New Hampshire demonstrated a lighter process with a consolidated inspection path and state-specific resale requirements.</p></section>
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Purpose</h2>
+        <p class="mt-4 text-[18px] leading-[1.65] text-slate-700">
+          Use this template to turn authoritative state salvage-vehicle requirements into a clear visitor decision path.
+          Official state sources provide the authority; SalvageCars.com provides the explanation, context, and next-step guidance.
+        </p>
+        <p class="mt-4 text-[18px] font-semibold leading-[1.65]">
+          What is this vehicle? → Can it return to the road? → What do I need to do? → What should I verify before I act? → Where is the official source?
+        </p>
+      </section>
 
-<section id="core-principle" class="mt-12 rounded-md border border-slate-200 bg-white p-6"><h2 class="text-[26px] font-bold">Core principle</h2><p class="mt-4 text-lg leading-[1.65] text-slate-700">A State Guidance page is not a copy of state DMV instructions. It provides a decision layer:</p><p class="mt-4 text-lg font-semibold leading-[1.65]">What is this vehicle? → Can it return to the road? → What do I need to do? → What should I verify before I act? → Where is the official source?</p><p class="mt-4 text-lg leading-[1.65] text-slate-700">Official state sources remain the authority. SalvageCars.com explains, organizes, and connects those sources without replacing them.</p></section>
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Template principles</h2>
+        <ul class="mt-5 list-disc space-y-3 pl-6 text-[18px] leading-[1.65] text-slate-700">
+          <li>Research the state before deciding which sections the finished page needs.</li>
+          <li>Do not force every state into identical visible sections.</li>
+          <li>Include state-specific sections when they answer a meaningful visitor question.</li>
+          <li>Do not add empty sections merely to match the template.</li>
+          <li>Prefer current guidance from the agency responsible for the process.</li>
+          <li>Verify substantive process claims against authoritative sources.</li>
+          <li>Record unresolved conflicts or outdated official wording during research rather than guessing.</li>
+          <li>Preserve published section IDs as stable URLs.</li>
+          <li>The template should evolve from demonstrated content needs rather than hypothetical completeness.</li>
+        </ul>
+      </section>
 
-<section id="required" class="mt-12"><h2 class="text-[30px] font-bold">Required page elements</h2>
-<h3 class="mt-8 text-[22px] font-bold">1. Breadcrumb</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Orient the visitor, reinforce the State Guidance hierarchy, and provide a route back to <code>/states/</code>.</p>
-<h3 class="mt-8 text-[22px] font-bold">2. H1 and concise lead</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Use <strong>[State] Salvage Vehicle Guidance</strong>. Summarize the classification, road eligibility, process or inspections, and official state requirements. Avoid generic introductions and SEO filler.</p>
-<h3 class="mt-8 text-[22px] font-bold">3. What you should know</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">A prominent direct answer identifying the state's most important decision or distinction.</p>
-<h3 class="mt-8 text-[22px] font-bold">4. State terminology</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Explain only terms that materially affect the process, such as salvage, rebuilt, revived salvage, junk, non-repairable, flood, or other state-specific classifications. Depth varies by state.</p>
-<h3 class="mt-8 text-[22px] font-bold">5. Can this vehicle return to the road?</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Directly explain whether relevant classifications can return to on-highway use. Surface classifications that permanently prevent road use.</p>
-<h3 class="mt-8 text-[22px] font-bold">6. How to get it back on the road</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Give a plain-language overview of the state process rather than reproducing every agency instruction. Typical steps may include ownership, repair, documentation, inspection, forms, fees, and rebuilt-title issuance.</p>
-<h3 class="mt-8 text-[22px] font-bold">7. Before you buy</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Turn the state's actual requirements into practical pre-purchase questions. Do not substitute a generic salvage checklist.</p>
-<h3 class="mt-8 text-[22px] font-bold">8. About this guidance</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Include the standard informational disclaimer, customized with state agency names where useful.</p><blockquote class="mt-4 border-l-4 border-slate-300 pl-5 text-base leading-7 text-slate-600"><p>SalvageCars.com provides general educational information to help you understand salvage vehicles, identify questions you may need to answer, and find the government agencies and official resources responsible for the applicable requirements.</p><p class="mt-3">This information is not legal advice and is not a substitute for guidance from the appropriate state agency or another government authority. Requirements, forms, fees, inspection procedures, and other rules can change, and the requirements that apply can depend on the particular vehicle and transaction.</p><p class="mt-3">Before buying, rebuilding, selling, titling, or registering a salvage vehicle, verify the current requirements with the appropriate state agency.</p></blockquote>
-<h3 class="mt-8 text-[22px] font-bold">9. Official sources</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">List the authoritative sources used to create the page. Include the agency, source title, direct official link, and a short description of what it covers.</p>
-<h3 class="mt-8 text-[22px] font-bold">10. What should I do next?</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Provide clear next actions. Use SalvageCars.com guides for explanation and official sources where action must occur.</p>
-<h3 class="mt-8 text-[22px] font-bold">11. Last reviewed</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Display the month and year the guidance was last substantively reviewed. The review date is part of the trust model.</p></section>
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Required page structure</h2>
 
-<section id="recommended" class="mt-12"><h2 class="text-[30px] font-bold">Recommended sections</h2>
-<h3 class="mt-8 text-[22px] font-bold">Inspections and verification</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Use when formal inspections or verifications are material. Explain what is required, who performs it, what it verifies, required documentation, and whether different inspections serve different purposes.</p>
-<h3 class="mt-8 text-[22px] font-bold">Documents and forms</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Surface forms visitors are reasonably likely to need. Identify the official name and number, link to the official source when practical, explain the purpose, and distinguish core from conditional documents.</p>
-<h3 class="mt-8 text-[22px] font-bold">Out-of-state vehicles</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Include when the state has meaningful nonresident or out-of-state inspection, title, documentation, recognition, or exception rules.</p>
-<h3 class="mt-8 text-[22px] font-bold">Fees and costs</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Include fees when authoritative, useful, and reasonably stable. For volatile fees, explain the category and link to current official information.</p></section>
+        <h3 class="mt-8 text-[22px] font-bold">1. Breadcrumb</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">Home → State Guidance → [State]</p>
 
-<section id="conditional" class="mt-12"><h2 class="text-[30px] font-bold">Conditional sections</h2>
-<h3 class="mt-8 text-[22px] font-bold">Scheduling an inspection</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Use when appointments, designated locations, or state-managed scheduling apply. Link to current scheduling information rather than copying volatile schedules.</p>
-<h3 class="mt-8 text-[22px] font-bold">What to bring to the inspection</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Use separately when documentation requirements merit emphasis; otherwise incorporate them into the inspection section.</p>
-<h3 class="mt-8 text-[22px] font-bold">Smog, emissions, safety, or equipment requirements</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Use when additional emissions, safety systems, VIN, stolen-parts, structural, or similar inspections apply.</p>
-<h3 class="mt-8 text-[22px] font-bold">Special vehicle classes</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Use only when requirements differ materially for motorcycles, trucks, trailers, commercial vehicles, reconstructed or specially constructed vehicles, older vehicles, or other relevant classes.</p></section>
+        <h3 class="mt-8 text-[22px] font-bold">2. H1 and concise lead</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Use “[State] Salvage Vehicle Guidance” as the standard H1. The lead should summarize the state's most important salvage/rebuilt distinction and what the page helps the visitor understand.
+        </p>
 
-<section id="state-specific" class="mt-12"><h2 class="text-[30px] font-bold">State-specific sections</h2><p class="mt-5 text-lg leading-[1.65] text-slate-700">Add sections when state law creates an important visitor question that does not fit naturally into the standard structure. State pages should not imitate one another merely for visual symmetry.</p>
-<h3 class="mt-8 text-[22px] font-bold">Selling or transferring the vehicle</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Research resale and transfer requirements for every state. Use a dedicated section when disclosure obligations, title-brand transfer rules, dealer obligations, decals, labels, or resale limitations materially affect the visitor.</p>
-<h3 class="mt-8 text-[22px] font-bold">Other state-specific requirements</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Add state-specific exceptions, prohibitions, unusual classifications, insurance requirements, or other decision points only when authoritative rules make them relevant.</p></section>
+        <h3 class="mt-8 text-[22px] font-bold">3. What you should know</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Provide a short direct-answer summary of the state's most consequential rules or distinctions. This should help a visitor understand the situation before reading procedural detail.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#what-you-should-know</code></p>
 
-<section id="links" class="mt-12"><h2 class="text-[30px] font-bold">Contextual official links</h2><p class="mt-5 text-lg leading-[1.65] text-slate-700">Link to official sources at the point where visitors may need to verify a requirement, open a form, schedule an inspection, locate a service, review a rule, or begin a state process.</p><p class="mt-4 text-lg font-semibold">Explain the requirement on SalvageCars.com → link to the exact official source where the visitor can verify or act.</p>
-<h3 class="mt-8 text-[22px] font-bold">Forms linking rule</h3><ul class="mt-3 list-disc space-y-2 pl-6 text-lg leading-[1.65] text-slate-700"><li>Use the official state form or forms page.</li><li>Use the official form name and number.</li><li>Explain what the form is used for.</li><li>Avoid third-party form mirrors.</li><li>Prefer current agency pages over stale PDFs when both exist.</li><li>Use the official forms page when a direct form URL is not durable.</li></ul></section>
+        <h3 class="mt-8 text-[22px] font-bold">4. State terminology</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Explain the title brands, certificates, classifications, and state-specific terms necessary to understand road eligibility and the process. Depth should vary by state.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#state-terminology</code></p>
 
-<section id="source-currency" class="mt-12"><h2 class="text-[30px] font-bold">Source currency rule</h2><p class="mt-5 text-lg leading-[1.65] text-slate-700"><strong>Official does not automatically mean current.</strong> When official sources conflict:</p><ol class="mt-4 list-decimal space-y-2 pl-6 text-lg leading-[1.65] text-slate-700"><li>Prefer the agency responsible for the current program.</li><li>Check current procedural guidance.</li><li>Check statutes or administrative rules when needed.</li><li>Identify legacy language.</li><li>Do not publish a definitive instruction until the discrepancy is resolved.</li></ol></section>
+        <h3 class="mt-8 text-[22px] font-bold">5. Can this vehicle return to the road?</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Clearly distinguish vehicles that may have a legal path back to road use from classifications or ownership documents that prevent rebuilding, retitling, registration, or normal highway use.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#can-this-vehicle-return-to-the-road</code></p>
 
-<section id="stable-ids" class="mt-12"><h2 class="text-[30px] font-bold">Stable section IDs</h2><p class="mt-5 text-lg leading-[1.65] text-slate-700">Major sections receive stable, human-readable IDs. State-specific IDs are allowed. Once published, treat them as stable URLs and do not rename them casually.</p><div class="mt-5 rounded-md border border-slate-200 bg-white p-5 font-mono text-sm leading-7 text-slate-700">#what-you-should-know<br>#state-terminology<br>#can-this-vehicle-return-to-the-road<br>#how-to-get-it-back-on-the-road<br>#inspections-and-verification<br>#documents-and-forms<br>#out-of-state-vehicles<br>#before-you-buy<br>#selling-a-rebuilt-vehicle<br>#official-sources<br>#what-should-i-do-next</div></section>
+        <h3 class="mt-8 text-[22px] font-bold">6. How to get it back on the road</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Describe the general state-specific process in a logical sequence. Keep it understandable and link to current official procedures where the visitor must verify details or act.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#how-to-get-it-back-on-the-road</code></p>
 
-<section id="visual" class="mt-12"><h2 class="text-[30px] font-bold">Visual pattern</h2><ul class="mt-5 list-disc space-y-2 pl-6 text-lg leading-[1.65] text-slate-700"><li>Shared site header and footer</li><li>Breadcrumb above title</li><li>H1 with concise lead</li><li>Reading column around <code>max-w-3xl</code></li><li>18px body text and approximately 1.65 line height</li><li>Generous vertical spacing</li><li>Restrained bordered “What you should know” and disclaimer surfaces</li><li>Contextual official links</li><li>Quiet bordered rows for forms, sources, and next actions where useful</li><li>No decorative cards or heavy shadows without a real information need</li></ul></section>
+        <h3 class="mt-8 text-[22px] font-bold">7. Documents and forms</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Identify important ownership documents, applications, builder statements, component-part records, receipts, inspection documents, and other forms when applicable. Explain what each important form is for rather than merely listing it.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#documents-and-forms</code></p>
 
-<section id="summary" class="mt-12"><h2 class="text-[30px] font-bold">Required / Recommended / Conditional summary</h2><div class="mt-6 overflow-x-auto rounded-md border border-slate-200 bg-white"><table class="w-full text-left text-sm"><thead class="bg-slate-100"><tr><th class="px-4 py-3">Element</th><th class="px-4 py-3">Status</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="px-4 py-3">Breadcrumb</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">H1 and lead</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">What you should know</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">State terminology</td><td class="px-4 py-3">Required in concept; depth varies</td></tr><tr><td class="px-4 py-3">Can this vehicle return to the road?</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">How to get it back on the road</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">Inspections and verification</td><td class="px-4 py-3">Recommended when applicable</td></tr><tr><td class="px-4 py-3">Documents and forms</td><td class="px-4 py-3">Recommended</td></tr><tr><td class="px-4 py-3">Fees and costs</td><td class="px-4 py-3">Recommended when useful</td></tr><tr><td class="px-4 py-3">Out-of-state vehicles</td><td class="px-4 py-3">Recommended when applicable</td></tr><tr><td class="px-4 py-3">Before you buy</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">Selling / transfer requirements</td><td class="px-4 py-3">Conditional / state-specific</td></tr><tr><td class="px-4 py-3">Other state-specific sections</td><td class="px-4 py-3">Conditional</td></tr><tr><td class="px-4 py-3">About this guidance</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">Official sources</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">What should I do next?</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">Last reviewed</td><td class="px-4 py-3">Required</td></tr><tr><td class="px-4 py-3">Stable section IDs</td><td class="px-4 py-3">Required</td></tr></tbody></table></div></section>
+        <h3 class="mt-8 text-[22px] font-bold">8. Before you buy</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Convert the state's rules into practical questions a prospective buyer should answer before purchasing or spending money on repairs.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#before-you-buy</code></p>
 
-<section id="workflow" class="mt-12"><h2 class="text-[30px] font-bold">Research and page-production workflow</h2><ol class="mt-5 list-decimal space-y-3 pl-6 text-lg leading-[1.65] text-slate-700"><li>Research the state using the State Page Content Model.</li><li>Identify authoritative agencies, statutes, rules, forms, and procedures.</li><li>Determine the state's important visitor decision points.</li><li>Draft the visitor-facing content.</li><li>Include only template sections justified by the state's rules.</li><li>Add state-specific sections where necessary.</li><li>Verify substantive process statements against authoritative sources.</li><li>Add contextual official links and direct form links where useful.</li><li>Add stable section IDs.</li><li>Build the HTML using the Design System.</li><li>Review for usefulness, not merely completeness.</li><li>Record the review date.</li><li>Add the page to the State Guidance index.</li></ol></section>
+        <h3 class="mt-8 text-[22px] font-bold">9. About this guidance</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Include the standard SalvageCars.com educational-information disclaimer and identify the appropriate state agency or agencies.
+        </p>
 
-<section id="relationships" class="mt-12"><h2 class="text-[30px] font-bold">Relationship to other internal documents</h2>
-<h3 class="mt-8 text-[22px] font-bold">State Page Content Model</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Defines what to research, what questions the research should answer, authoritative-source expectations, and treatment of uncertainty or conflicting information.</p>
-<h3 class="mt-8 text-[22px] font-bold">State Page Template</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Defines how approved state guidance is structured for visitors and which sections are required, recommended, conditional, or state-specific.</p>
-<h3 class="mt-8 text-[22px] font-bold">Content Standards</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Defines voice, terminology, warning language, capitalization, link wording, form naming, disclaimer conventions, uncertainty, and source attribution.</p>
-<h3 class="mt-8 text-[22px] font-bold">Design System</h3><p class="mt-3 text-lg leading-[1.65] text-slate-700">Defines typography, spacing, color, borders, focus treatment, page widths, and reusable visual patterns.</p></section>
+        <h3 class="mt-8 text-[22px] font-bold">10. Official sources</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Consolidate the primary authoritative state sources used for the page. Prefer the responsible agency, current procedures, official forms, statutes, and administrative rules.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#official-sources</code></p>
 
-<section id="status" class="mt-12 rounded-md border border-slate-200 bg-white p-6"><h2 class="text-[26px] font-bold">Status</h2><p class="mt-4 text-lg leading-[1.65] text-slate-700"><strong>State Page Template: V1 living document based on California and New Hampshire implementations.</strong></p><p class="mt-4 text-lg leading-[1.65] text-slate-700">Before large-scale production of the remaining states, validate the template against at least one additional state with a materially different regulatory model. Modify the template when that test, or later implementations, reveals a genuinely reusable pattern.</p><p class="mt-4 text-lg leading-[1.65] text-slate-700">The template should evolve from demonstrated content needs rather than hypothetical completeness.</p></section>
-<p class="mt-10 text-sm text-slate-500">Last updated: September 2026</p>
-</article></main></body></html>
+        <h3 class="mt-8 text-[22px] font-bold">11. What should I do next?</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Give visitors a small number of situation-based next actions, such as buying, already owning, dealing with an out-of-state vehicle, or preparing for an inspection.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#what-should-i-do-next</code></p>
+
+        <h3 class="mt-8 text-[22px] font-bold">12. Last reviewed</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Record the month and year when the state's substantive requirements and official links were last reviewed.
+        </p>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Recommended sections when applicable</h2>
+
+        <h3 class="mt-8 text-[22px] font-bold">Inspections and verification</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Explain not only what inspection, examination, or verification is required, but also its purpose, who performs it, what it establishes, and what it does not establish when that distinction matters.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#inspections-and-verification</code></p>
+
+        <h3 class="mt-8 text-[22px] font-bold">Out-of-state vehicles</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Include when the state has meaningful rules for recognizing out-of-state salvage, rebuilt, junk, nonrepairable, parts-only, or similar ownership documents.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">Stable ID: <code>#out-of-state-vehicles</code></p>
+
+        <h3 class="mt-8 text-[22px] font-bold">Selling or transferring the vehicle</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Research this topic for every state. Include a dedicated section when title branding, written disclosure, advertising, decals, transfer requirements, or other obligations would materially affect a future seller or buyer.
+        </p>
+        <p class="mt-2 text-sm text-slate-500">
+          Preferred visible heading: “What should I know if I later sell or transfer the vehicle?”<br>
+          Preserve the existing stable ID: <code>#selling-a-rebuilt-vehicle</code>
+        </p>
+
+        <h3 class="mt-8 text-[22px] font-bold">Fees and costs</h3>
+        <p class="mt-3 text-[18px] leading-[1.65] text-slate-700">
+          Include when authoritative fee information materially helps the visitor. Avoid hard-coding volatile fees when linking to the current agency source is more durable.
+        </p>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Conditional and state-specific sections</h2>
+        <p class="mt-4 text-[18px] leading-[1.65] text-slate-700">
+          Add sections when the state's actual process creates a meaningful visitor question. Examples discovered during implementation include:
+        </p>
+        <ul class="mt-5 list-disc space-y-3 pl-6 text-[18px] leading-[1.65] text-slate-700">
+          <li>inspection scheduling or what to bring</li>
+          <li>component-part documentation</li>
+          <li>transporting a vehicle to an examination</li>
+          <li>flood vehicles</li>
+          <li>airbags or restraint systems</li>
+          <li>Certificate of Destruction or other nonrepairable classifications</li>
+          <li>dealer or business licensing</li>
+          <li>special vehicle classes</li>
+          <li>emissions, safety, equipment, or verification requirements</li>
+        </ul>
+        <p class="mt-4 text-[18px] leading-[1.65] text-slate-700">
+          These examples are not required template sections. Add them only when the state demonstrates the need.
+        </p>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Contextual official-source rule</h2>
+        <div class="mt-5 rounded-md border border-slate-200 bg-white p-6">
+          <p class="text-[18px] leading-[1.65] text-slate-700">
+            Explain the requirement in plain language, then link to the most specific current official source where the visitor can verify the requirement or take the next action.
+          </p>
+          <p class="mt-4 text-[18px] leading-[1.65] text-slate-700">
+            Avoid replacing explanation with a directory of government links. Do not duplicate volatile agency-maintained information when a current official source can be linked instead.
+          </p>
+        </div>
+        <ul class="mt-5 list-disc space-y-3 pl-6 text-[18px] leading-[1.65] text-slate-700">
+          <li>Put important official links at the point of need.</li>
+          <li>Use the Official Sources section to consolidate the principal references at the bottom.</li>
+          <li>Link important official forms where they help the visitor act.</li>
+          <li>Prefer current agency web pages or current form pages over stale PDFs when possible.</li>
+          <li>If a direct form URL is not durable, link to the agency's official forms page.</li>
+          <li>Do not copy agency-maintained inspection-location lists or similar volatile operational information unless there is a compelling reason.</li>
+          <li>Official does not automatically mean current. Reconcile outdated or conflicting official instructions before publishing a definitive statement.</li>
+        </ul>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Stable section IDs</h2>
+        <pre class="mt-5 overflow-x-auto rounded-md border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-700"><code>#what-you-should-know
+#state-terminology
+#can-this-vehicle-return-to-the-road
+#how-to-get-it-back-on-the-road
+#inspections-and-verification
+#documents-and-forms
+#out-of-state-vehicles
+#before-you-buy
+#selling-a-rebuilt-vehicle
+#official-sources
+#what-should-i-do-next</code></pre>
+        <p class="mt-4 text-[18px] leading-[1.65] text-slate-700">
+          State-specific sections may use additional descriptive IDs. Once a section is published, treat its ID as a stable URL unless there is a strong reason to change it.
+        </p>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Production workflow</h2>
+        <ol class="mt-5 list-decimal space-y-3 pl-6 text-[18px] leading-[1.65] text-slate-700">
+          <li>Research the state using the State Page Content Model.</li>
+          <li>Identify authoritative agencies, statutes, rules, forms, and procedures.</li>
+          <li>Determine the important visitor decision points.</li>
+          <li>Draft visitor-facing content.</li>
+          <li>Include only justified template sections.</li>
+          <li>Add state-specific sections when necessary.</li>
+          <li>Verify substantive process claims against authoritative sources.</li>
+          <li>Add contextual official links and forms.</li>
+          <li>Add and preserve stable section IDs.</li>
+          <li>Build the HTML using the SalvageCars.com Design System.</li>
+          <li>Review for usefulness, not merely completeness.</li>
+          <li>Record the review date.</li>
+          <li>Add the completed page to the State Guidance index.</li>
+        </ol>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-[26px] font-bold md:text-[30px]">Visual pattern</h2>
+        <ul class="mt-5 list-disc space-y-3 pl-6 text-[18px] leading-[1.65] text-slate-700">
+          <li>Use the shared site header and footer.</li>
+          <li>Use breadcrumb → H1 → concise lead.</li>
+          <li>Use a reading width around <code>max-w-3xl</code>.</li>
+          <li>Use approximately 18px body text with line-height around 1.65.</li>
+          <li>Use generous vertical spacing.</li>
+          <li>Use restrained bordered treatments for “What you should know” and the informational disclaimer.</li>
+          <li>Use quiet bordered rows for forms, official sources, and next actions when useful.</li>
+          <li>Avoid decorative cards, heavy shadows, and visual containers that do not improve comprehension.</li>
+        </ul>
+      </section>
+
+      <section class="mt-12 border-t border-slate-200 pt-8">
+        <p class="text-sm text-slate-500">
+          Validation basis: California, New Hampshire, Texas, Florida, and New York state guidance implementations. September 2026.
+        </p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
