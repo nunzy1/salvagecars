@@ -3,439 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>SalvageCars.com | Making Sense of Salvage Vehicles</title>
-  <meta
-    name="description"
-    content="Clear guidance on salvage vehicles, title brands, buying risks, rebuilding requirements, and official state resources."
-  >
-
+  <meta name="description" content="Clear guidance on salvage vehicles, title brands, buying risks, rebuilding requirements, and official state resources.">
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    a:focus-visible {
-      outline: 3px solid #2563eb;
-      outline-offset: 3px;
-      border-radius: 6px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; border-radius: 6px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; } }
   </style>
 </head>
-
 <body class="bg-slate-50 text-slate-900 antialiased">
-
-  <!-- Site Header -->
   <header class="border-b border-slate-200 bg-white">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-8">
-      <a
-        href="/"
-        class="text-xl font-extrabold tracking-tight text-slate-900 no-underline"
-        aria-label="SalvageCars.com home"
-      >
-        SalvageCars.com
-      </a>
-
-      <nav
-        aria-label="Primary navigation"
-        class="flex items-center gap-6 text-sm font-medium md:text-base"
-      >
-        <a
-          href="/guides/"
-          class="text-slate-600 no-underline hover:text-slate-900"
-        >
-          Guides
-        </a>
-
-        <a
-          href="/states/"
-          class="text-slate-600 no-underline hover:text-slate-900"
-        >
-          State Guidance
-        </a>
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5 md:px-8">
+      <a href="/" class="text-xl font-extrabold tracking-tight text-slate-900 no-underline" aria-label="SalvageCars.com home">SalvageCars.com</a>
+      <nav aria-label="Primary navigation" class="flex items-center gap-6 text-sm font-medium md:text-base">
+        <a href="/guides/" class="text-slate-600 no-underline hover:text-slate-900">Guides</a>
+        <a href="/#state-guidance" class="text-slate-600 no-underline hover:text-slate-900">State Guidance</a>
       </nav>
     </div>
   </header>
-
   <main>
-
-    <!-- Hero -->
-    <section class="mx-auto max-w-7xl px-6 pb-14 pt-14 md:px-8 md:pb-20 md:pt-20">
+    <section aria-labelledby="intro-title" class="mx-auto max-w-7xl px-6 pb-14 pt-14 md:px-8 md:pb-20 md:pt-20">
       <div class="max-w-3xl">
-        <h1
-          class="max-w-2xl text-[34px] font-extrabold leading-[1.15] tracking-tight md:text-[40px]"
-        >
-          Making Sense of Salvage Vehicles
-        </h1>
-
-        <p class="mt-5 max-w-2xl text-[19px] leading-8 text-slate-600 md:text-xl">
-          Understand salvage titles, buying risks, rebuilding requirements,
-          and the rules in your state.
-        </p>
+        <h1 id="intro-title" class="max-w-2xl text-[34px] font-extrabold leading-[1.15] tracking-tight md:text-[40px]">Making Sense of Salvage Vehicles</h1>
+        <p class="mt-5 max-w-2xl text-[19px] leading-8 text-slate-600 md:text-xl">Understand salvage titles, buying risks, rebuilding requirements, and the rules in your state.</p>
       </div>
     </section>
-
-    <!-- Jobs To Be Done -->
-    <section class="mx-auto max-w-7xl px-6 pb-16 md:px-8 md:pb-20">
+    <section aria-labelledby="questions-title" class="mx-auto max-w-7xl px-6 pb-16 md:px-8 md:pb-20">
       <div class="max-w-3xl">
-        <h2
-          class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]"
-        >
-          What do you need help with?
-        </h2>
-
-        <div class="mt-7 border-t border-slate-200">
-
-          <a
-            href="/guides/"
-            class="group block border-b border-slate-200 py-6 no-underline"
-          >
-            <div class="flex items-start justify-between gap-6">
-              <div>
-                <h3
-                  class="text-[21px] font-bold leading-snug text-slate-900 md:text-[22px]"
-                >
-                  I’m thinking about buying a salvage vehicle
-                </h3>
-
-                <p class="mt-2 text-base leading-7 text-slate-600 md:text-[17px]">
-                  Understand title brands, buying risks, costs, auctions,
-                  and what to check before you buy.
-                </p>
-              </div>
-
-              <span
-                aria-hidden="true"
-                class="mt-1 text-xl text-blue-700 transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </div>
-          </a>
-
-          <a
-            href="/states/"
-            class="group block border-b border-slate-200 py-6 no-underline"
-          >
-            <div class="flex items-start justify-between gap-6">
-              <div>
-                <h3
-                  class="text-[21px] font-bold leading-snug text-slate-900 md:text-[22px]"
-                >
-                  I need to understand my state’s requirements
-                </h3>
-
-                <p class="mt-2 text-base leading-7 text-slate-600 md:text-[17px]">
-                  Find information about salvage titles, rebuilt vehicles,
-                  inspections, registration, and other state requirements.
-                </p>
-              </div>
-
-              <span
-                aria-hidden="true"
-                class="mt-1 text-xl text-blue-700 transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </div>
-          </a>
-
-          <a
-            href="/states/"
-            class="group block border-b border-slate-200 py-6 no-underline"
-          >
-            <div class="flex items-start justify-between gap-6">
-              <div>
-                <h3
-                  class="text-[21px] font-bold leading-snug text-slate-900 md:text-[22px]"
-                >
-                  I’m rebuilding a salvage vehicle
-                </h3>
-
-                <p class="mt-2 text-base leading-7 text-slate-600 md:text-[17px]">
-                  Learn about documentation, inspections, title requirements,
-                  and the steps that may be required to return a vehicle to the road.
-                </p>
-              </div>
-
-              <span
-                aria-hidden="true"
-                class="mt-1 text-xl text-blue-700 transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </div>
-          </a>
-
-          <a
-            href="/states/"
-            class="group block border-b border-slate-200 py-6 no-underline"
-          >
-            <div class="flex items-start justify-between gap-6">
-              <div>
-                <h3
-                  class="text-[21px] font-bold leading-snug text-slate-900 md:text-[22px]"
-                >
-                  I’m buying a salvage vehicle from another state
-                </h3>
-
-                <p class="mt-2 text-base leading-7 text-slate-600 md:text-[17px]">
-                  Understand why the requirements in both the vehicle’s current
-                  state and the state where you plan to register it may matter.
-                </p>
-              </div>
-
-              <span
-                aria-hidden="true"
-                class="mt-1 text-xl text-blue-700 transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </div>
-          </a>
-
-        </div>
+        <h2 id="questions-title" class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">What do you need help with?</h2>
+        <p class="mt-4 text-lg leading-8 text-slate-600">Explore common questions about salvage vehicles. State-specific question navigation is being developed; in the meantime, use the state guidance below.</p>
+        <ul class="mt-7 border-t border-slate-200"><li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">Can my salvage vehicle be rebuilt?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li>
+<li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">What do the title brands in my state mean?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li>
+<li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">Does my vehicle need an inspection?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li>
+<li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">How do I get my vehicle back on the road?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li>
+<li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">What if I bought a vehicle from another state?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li>
+<li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">How do I sell or transfer my vehicle?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li>
+<li class="flex items-center justify-between gap-5 border-b border-slate-200 py-4"><span class="text-lg font-semibold leading-7 text-slate-900">What should I check before buying a salvage vehicle?</span><span class="shrink-0 text-sm text-slate-500">Coming soon</span></li></ul>
       </div>
     </section>
-
-    <!-- State Guidance -->
-    <section class="border-y border-slate-200 bg-white">
+    <section id="state-guidance" aria-labelledby="state-title" class="scroll-mt-6 border-y border-slate-200 bg-slate-50">
       <div class="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
+        <h2 id="state-title" class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">State Salvage Vehicle Guidance</h2>
         <div class="max-w-3xl">
-
-          <h2
-            class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]"
-          >
-            Start with your state
-          </h2>
-
-          <p class="mt-4 text-lg leading-8 text-slate-600">
-            Salvage vehicle laws, title terminology, inspection requirements,
-            and rebuilding processes vary from state to state.
-          </p>
-
-          <p class="mt-4 text-lg leading-8 text-slate-600">
-            Our State Guidance helps you find information for all 50 states
-            and connects you to official state motor vehicle agencies and other
-            government sources.
-          </p>
-
-          <p class="mt-6">
-            <a
-              href="/states/"
-              class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
-            >
-              Explore State Guidance →
-            </a>
-          </p>
+          <p class="mt-4 text-lg leading-8 text-slate-600">Salvage vehicle laws, title terminology, inspection requirements, and rebuilding processes vary from state to state.</p>
+          <p class="mt-4 text-lg leading-8 text-slate-600">Our State Guidance helps you find information for all 50 states and the District of Columbia and connects you to official state motor vehicle agencies and other government sources.</p>
+        </div>
+        <div class="mt-8 rounded-lg border border-slate-200 bg-white p-5 sm:p-6">
+          <ul aria-label="States and District of Columbia" class="grid grid-cols-1 gap-x-8 gap-y-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"><li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/alabama/">Alabama</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/alaska/">Alaska</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/arizona/">Arizona</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/arkansas/">Arkansas</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/california/">California</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/colorado/">Colorado</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/connecticut/">Connecticut</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/delaware/">Delaware</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/district-of-columbia/">District of Columbia</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/florida/">Florida</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/georgia/">Georgia</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/hawaii/">Hawaii</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/idaho/">Idaho</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/illinois/">Illinois</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/indiana/">Indiana</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/iowa/">Iowa</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/kansas/">Kansas</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/kentucky/">Kentucky</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/louisiana/">Louisiana</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/maine/">Maine</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/maryland/">Maryland</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/massachusetts/">Massachusetts</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/michigan/">Michigan</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/minnesota/">Minnesota</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/mississippi/">Mississippi</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/missouri/">Missouri</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/montana/">Montana</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/nebraska/">Nebraska</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/nevada/">Nevada</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/new-hampshire/">New Hampshire</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/new-jersey/">New Jersey</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/new-mexico/">New Mexico</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/new-york/">New York</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/north-carolina/">North Carolina</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/north-dakota/">North Dakota</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/ohio/">Ohio</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/oklahoma/">Oklahoma</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/oregon/">Oregon</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/pennsylvania/">Pennsylvania</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/rhode-island/">Rhode Island</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/south-carolina/">South Carolina</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/south-dakota/">South Dakota</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/tennessee/">Tennessee</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/texas/">Texas</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/utah/">Utah</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/vermont/">Vermont</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/virginia/">Virginia</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/washington/">Washington</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/west-virginia/">West Virginia</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/wisconsin/">Wisconsin</a></li>
+<li><a class="inline-block py-1 font-medium text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/states/wyoming/">Wyoming</a></li></ul>
         </div>
       </div>
     </section>
-
-    <!-- Guides -->
-    <section class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <section aria-labelledby="guides-title" class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
       <div class="max-w-5xl">
-
-        <div class="max-w-3xl">
-          <h2
-            class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]"
-          >
-            Guides for making informed decisions
-          </h2>
-
-          <p class="mt-4 text-lg leading-8 text-slate-600">
-            Salvage vehicles can offer opportunities, but they can also come
-            with risks and costs that are easy to overlook.
-          </p>
-        </div>
-
-        <div class="mt-9 grid gap-6 md:grid-cols-3">
-
-          <article class="rounded-md border border-slate-200 bg-white p-6">
-            <h3 class="text-[21px] font-bold leading-snug">
-              How to Buy a Salvage Car
-            </h3>
-
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Learn what to research before buying, how salvage auctions work,
-              and which costs to consider beyond the purchase price.
-            </p>
-
-            <p class="mt-5">
-              <a
-                href="/guides/how-to-buy-a-salvage-car/"
-                class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
-              >
-                Read the guide →
-              </a>
-            </p>
-          </article>
-
-          <article class="rounded-md border border-slate-200 bg-white p-6">
-            <h3 class="text-[21px] font-bold leading-snug">
-              What Is a Salvage Car?
-            </h3>
-
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Understand what a salvage designation means, why terminology
-              differs by state, and why title status matters.
-            </p>
-
-            <p class="mt-5">
-              <a
-                href="/guides/what-is-a-salvage-car/"
-                class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
-              >
-                Read the guide →
-              </a>
-            </p>
-          </article>
-
-          <article class="rounded-md border border-slate-200 bg-white p-6">
-            <h3 class="text-[21px] font-bold leading-snug">
-              Is a Salvage Car Worth It?
-            </h3>
-
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Consider damage, repair costs, title restrictions, resale value,
-              and other factors before deciding whether a vehicle makes sense.
-            </p>
-
-            <p class="mt-5">
-              <a
-                href="/guides/is-a-salvage-car-worth-it/"
-                class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
-              >
-                Read the guide →
-              </a>
-            </p>
-          </article>
-
-        </div>
-
-        <p class="mt-8">
-          <a
-            href="/guides/"
-            class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
-          >
-            View all guides →
-          </a>
-        </p>
+        <h2 id="guides-title" class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Guides for Making Informed Decisions</h2>
+        <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Salvage vehicles can offer opportunities, but they can also come with risks and costs that are easy to overlook.</p>
+        <ul class="mt-7 border-t border-slate-200"><li class="border-b border-slate-200 py-5"><a class="text-lg font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/guides/how-to-buy-a-salvage-car/">How to Buy a Salvage Car <span aria-hidden="true">→</span></a><p class="mt-2 max-w-3xl leading-7 text-slate-600">Learn what to research before buying, how salvage auctions work, and which costs to consider beyond the purchase price.</p></li>
+<li class="border-b border-slate-200 py-5"><a class="text-lg font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/guides/what-is-a-salvage-car/">What Is a Salvage Car? <span aria-hidden="true">→</span></a><p class="mt-2 max-w-3xl leading-7 text-slate-600">Understand what a salvage designation means, why terminology differs by state, and why title status matters.</p></li>
+<li class="border-b border-slate-200 py-5"><a class="text-lg font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900" href="/guides/is-a-salvage-car-worth-it/">Is a Salvage Car Worth It? <span aria-hidden="true">→</span></a><p class="mt-2 max-w-3xl leading-7 text-slate-600">Consider damage, repair costs, title restrictions, resale value, and other factors before deciding whether a vehicle makes sense.</p></li></ul>
+        <p class="mt-8"><a href="/guides/" class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800">View all guides →</a></p>
       </div>
     </section>
-
-    <!-- Why SalvageCars.com -->
-    <section class="border-t border-slate-200 bg-white">
+    <section aria-labelledby="why-title" class="border-t border-slate-200 bg-white">
       <div class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
         <div class="max-w-5xl">
-
-          <h2
-            class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]"
-          >
-            Why SalvageCars.com?
-          </h2>
-
+          <h2 id="why-title" class="text-[26px] font-bold leading-tight tracking-tight md:text-[30px]">Why SalvageCars.com?</h2>
           <div class="mt-8 grid gap-8 md:grid-cols-3">
-
-            <div>
-              <h3 class="text-lg font-semibold">
-                Plain-language guidance
-              </h3>
-
-              <p class="mt-2 text-base leading-7 text-slate-600">
-                We explain salvage vehicle topics without assuming you already
-                understand the terminology or process.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-semibold">
-                Official state sources
-              </h3>
-
-              <p class="mt-2 text-base leading-7 text-slate-600">
-                When state requirements matter, we help you reach the government
-                agencies, laws, forms, and other official sources behind the guidance.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-semibold">
-                Practical information for better decisions
-              </h3>
-
-              <p class="mt-2 text-base leading-7 text-slate-600">
-                Our goal is to help you understand the vehicle, the process,
-                the potential costs, and the questions to ask before deciding
-                what to do next.
-              </p>
-            </div>
-
+            <div><h3 class="text-lg font-semibold">Plain-language guidance</h3><p class="mt-2 text-base leading-7 text-slate-600">We explain salvage vehicle topics without assuming you already understand the terminology or process.</p></div>
+            <div><h3 class="text-lg font-semibold">Official state sources</h3><p class="mt-2 text-base leading-7 text-slate-600">When state requirements matter, we help you reach the government agencies, laws, forms, and other official sources behind the guidance.</p></div>
+            <div><h3 class="text-lg font-semibold">Practical information for better decisions</h3><p class="mt-2 text-base leading-7 text-slate-600">Our goal is to help you understand the vehicle, the process, the potential costs, and the questions to ask before deciding what to do next.</p></div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
-
-  <!-- Site Footer -->
   <footer class="border-t border-slate-200 bg-slate-50">
     <div class="mx-auto max-w-7xl px-6 py-8 md:px-8">
-      <nav
-        aria-label="Footer navigation"
-        class="flex flex-wrap gap-x-6 gap-y-3 text-sm"
-      >
-        <a
-          href="/vision/"
-          class="text-slate-600 underline underline-offset-4 hover:text-slate-900"
-        >
-          SalvageCars.com Vision
-        </a>
-
-        <a
-          href="/architecture/"
-          class="text-slate-600 underline underline-offset-4 hover:text-slate-900"
-        >
-          Architecture
-        </a>
-
-        <a
-          href="/privacy/"
-          class="text-slate-600 underline underline-offset-4 hover:text-slate-900"
-        >
-          Privacy
-        </a>
-
-        <a
-          href="/terms/"
-          class="text-slate-600 underline underline-offset-4 hover:text-slate-900"
-        >
-          Terms
-        </a>
+      <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+        <a href="/vision/" class="text-slate-600 underline underline-offset-4 hover:text-slate-900">SalvageCars.com Vision</a>
+        <a href="/architecture/" class="text-slate-600 underline underline-offset-4 hover:text-slate-900">Architecture</a>
+        <a href="/privacy/" class="text-slate-600 underline underline-offset-4 hover:text-slate-900">Privacy</a>
+        <a href="/terms/" class="text-slate-600 underline underline-offset-4 hover:text-slate-900">Terms</a>
       </nav>
     </div>
   </footer>
-
 </body>
 </html>
