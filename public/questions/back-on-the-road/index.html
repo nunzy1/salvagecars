@@ -120,26 +120,13 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // Return-to-road section anchors verified in nine state HTML files.
-      // Other states open at the top until their anchors are checked.
-      const verifiedRoadAnchors = {
-        "oklahoma": "how-to-get-it-back-on-the-road",
-        "oregon": "how-to-get-it-back-on-the-road",
-        "rhode-island": "how-to-get-it-back-on-the-road",
-        "south-carolina": "how-to-get-it-back-on-the-road",
-        "south-dakota": "how-to-get-it-back-on-the-road",
-        "utah": "how-to-get-it-back-on-the-road",
-        "vermont": "how-to-get-it-back-on-the-road",
-        "west-virginia": "how-to-get-it-back-on-the-road",
-        "wyoming": "how-to-get-it-back-on-the-road"
-      };
+      // All 51 state guidance pages use the same return-to-road section anchor.
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        const anchor = verifiedRoadAnchors[state] ? '#' + verifiedRoadAnchors[state] : '';
-        window.location.assign('/states/' + state + '/' + anchor);
+        window.location.assign('/states/' + state + '/#how-to-get-it-back-on-the-road');
       });
     })();
   </script>
