@@ -120,14 +120,32 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // Verified against nine available state HTML files. Other states open at the top until their anchors are checked.
-      const verifiedTerminologyAnchors = new Set(["oklahoma","oregon","rhode-island","south-carolina","south-dakota","utah","vermont","west-virginia","wyoming"]);
+      // Q2 anchors verified for all 51 jurisdictions in Navigation Mapping Checklist Update 10.
+      // Most states use #state-terminology; exceptions must retain their exact section IDs.
+      const terminologyAnchors = {
+        "california": "#california-terminology",
+        "montana": "#understand-montana-terminology",
+        "nebraska": "#understand-nebraska-terminology",
+        "nevada": "#understand-nevada-terminology",
+        "new-hampshire": "#new-hampshire-terminology",
+        "new-mexico": "#understand-new-mexico-terminology",
+        "north-dakota": "#understand-north-dakota-terminology",
+        "oklahoma": "#oklahoma-terminology",
+        "oregon": "#oregon-terminology",
+        "rhode-island": "#rhode-island-terminology",
+        "south-carolina": "#south-carolina-terminology",
+        "south-dakota": "#south-dakota-terminology",
+        "utah": "#utah-terminology",
+        "vermont": "#vermont-terminology",
+        "west-virginia": "#west-virginia-terminology",
+        "wyoming": "#wyoming-terminology"
+};
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        const anchor = verifiedTerminologyAnchors.has(state) ? '#' + state + '-terminology' : '';
+        const anchor = terminologyAnchors[state] || '#state-terminology';
         window.location.assign('/states/' + state + '/' + anchor);
       });
     })();
