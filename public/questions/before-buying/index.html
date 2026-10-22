@@ -120,14 +120,21 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // Relevant before-buying section anchors will be added after the state-page consistency review.
-      // Until then, each selection opens the relevant state guidance page.
+      // Q7 destinations verified against the 51-jurisdiction navigation checklist.
+      const stateSpecificAnchors = {
+        "montana": "what-should-i-check-before-buying-a-montana-salvage-vehicle",
+        "nebraska": "what-should-i-check-before-buying-a-nebraska-salvage-vehicle",
+        "nevada": "what-should-i-check-before-buying-a-nevada-salvage-vehicle",
+        "new-mexico": "what-should-i-check-before-buying-a-new-mexico-salvage-vehicle",
+        "north-dakota": "what-should-i-check-before-buying-a-north-dakota-salvage-vehicle"
+      };
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        window.location.assign('/states/' + state + '/');
+        const anchor = stateSpecificAnchors[state] || 'before-you-buy';
+        window.location.assign('/states/' + state + '/#' + anchor);
       });
     })();
   </script>
