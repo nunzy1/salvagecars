@@ -120,25 +120,19 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // Out-of-state vehicle section anchors verified in nine state HTML files.
-      // Other states open at the top until their anchors are checked.
-      const verifiedOutOfStateAnchors = {
-        "oklahoma": "out-of-state-vehicles",
-        "oregon": "out-of-state-vehicles",
-        "rhode-island": "out-of-state-vehicles",
-        "south-carolina": "out-of-state-vehicles",
-        "south-dakota": "out-of-state-vehicles",
-        "utah": "out-of-state-vehicles",
-        "vermont": "out-of-state-vehicles",
-        "west-virginia": "out-of-state-vehicles",
-        "wyoming": "out-of-state-vehicles"
-      };
+      // Five jurisdictions use a distinct, verified out-of-state section anchor.
+      // All other jurisdictions use #out-of-state-vehicles.
+      const alternateOutOfStateAnchors = new Set([
+        'montana', 'nebraska', 'nevada', 'new-mexico', 'north-dakota'
+      ]);
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        const anchor = verifiedOutOfStateAnchors[state] ? '#' + verifiedOutOfStateAnchors[state] : '';
+        const anchor = alternateOutOfStateAnchors.has(state)
+          ? '#what-if-the-vehicle-comes-from-another-state'
+          : '#out-of-state-vehicles';
         window.location.assign('/states/' + state + '/' + anchor);
       });
     })();
