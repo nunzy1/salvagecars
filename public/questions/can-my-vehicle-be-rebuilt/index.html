@@ -120,15 +120,12 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // Verified against available state HTML. Other states open at the top until their anchors are checked.
-      const verifiedEligibilityAnchors = new Set(["oklahoma","oregon","rhode-island","south-carolina","south-dakota","utah","vermont","west-virginia","wyoming"]);
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        const anchor = verifiedEligibilityAnchors.has(state) ? '#can-this-vehicle-return-to-the-road' : '';
-        window.location.assign('/states/' + state + '/' + anchor);
+        window.location.assign('/states/' + state + '/#can-this-vehicle-return-to-the-road');
       });
     })();
   </script>
