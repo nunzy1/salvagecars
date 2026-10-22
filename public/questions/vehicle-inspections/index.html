@@ -120,9 +120,16 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // Inspection section anchors verified in nine state HTML files.
-      // Other states open at the top until their anchors are checked.
-      const verifiedInspectionAnchors = {
+      // Exact Q3 destinations from the completed 51-jurisdiction navigation audit.
+      // States not listed here use #inspections-and-verification.
+      const inspectionAnchorOverrides = {
+        "delaware": "inspection-limitations",
+        "montana": "what-inspections-and-verification-are-required",
+        "nebraska": "what-inspections-and-verification-are-required",
+        "nevada": "what-inspections-and-verification-are-required",
+        "new-hampshire": "salvage-inspection",
+        "new-mexico": "what-inspections-and-verification-are-required",
+        "north-dakota": "what-inspections-and-verification-are-required",
         "oklahoma": "salvage-inspection",
         "oregon": "vin-inspections",
         "rhode-island": "salvage-inspections",
@@ -132,13 +139,13 @@
         "vermont": "rebuilt-vehicle-inspections",
         "west-virginia": "rebuilt-vehicle-inspections",
         "wyoming": "rebuilt-vehicle-inspections"
-      };
+};
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        const anchor = verifiedInspectionAnchors[state] ? '#' + verifiedInspectionAnchors[state] : '';
+        const anchor = '#' + (inspectionAnchorOverrides[state] || 'inspections-and-verification');
         window.location.assign('/states/' + state + '/' + anchor);
       });
     })();
