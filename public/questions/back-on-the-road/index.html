@@ -120,13 +120,21 @@
     (() => {
       const form = document.getElementById('state-form');
       const select = document.getElementById('state');
-      // All 51 state guidance pages use the same return-to-road section anchor.
+      // Five states use a state-specific return-to-road anchor; all others use the shared anchor.
       form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (!select.reportValidity()) return;
         const state = select.value;
         if (!Array.from(select.options).some(option => option.value === state && state)) return;
-        window.location.assign('/states/' + state + '/#how-to-get-it-back-on-the-road');
+        const specialAnchors = {
+          'montana': 'how-do-i-get-a-montana-salvage-vehicle-back-on-the-road',
+          'nebraska': 'how-do-i-get-a-nebraska-salvage-vehicle-back-on-the-road',
+          'nevada': 'how-do-i-get-a-nevada-salvage-vehicle-back-on-the-road',
+          'new-mexico': 'how-do-i-get-a-new-mexico-salvage-vehicle-back-on-the-road',
+          'north-dakota': 'how-do-i-get-a-north-dakota-salvage-vehicle-back-on-the-road'
+        };
+        const anchor = specialAnchors[state] || 'how-to-get-it-back-on-the-road';
+        window.location.assign('/states/' + state + '/#' + anchor);
       });
     })();
   </script>
