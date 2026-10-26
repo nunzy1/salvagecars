@@ -55,7 +55,11 @@ def analyze(name, raw):
                     add('Review',f'Official source uses non-HTTPS or relative URL: {href}')
             # Only flag if no descriptions at all; different templates use small or p.
             containers=[a.find_parent(['div','li']) for a in links]
-            described=sum(bool(c and (c.find('small') or c.find('p'))) for c in containers)
+            # Also accept descriptive text following a link within its list item
+            # (Hawaii uses inline '— description' rather than <small>/<p>).
+            described=sum(bool(c and (c.find('small') or c.find('p') or
+                (c.name=='li' and c.get_text(' ',strip=True).strip() != a.get_text(' ',strip=True))))
+                for a,c in zip(links,containers))
             if links and described==0:add('Review','Official source links: no adjacent descriptions detected')
             dark=sum('text-slate-900' in a.get('class',[]) for a in links)
             if dark:add('Review',f'{dark} official-source links use text-slate-900 (check link highlighting)')
