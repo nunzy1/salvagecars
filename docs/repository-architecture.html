@@ -13,15 +13,6 @@
     <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
         Repository Architecture
     </h1>
-
-    <p class="text-lg text-slate-600">
-        Internal Project Documentation
-    </p>
-
-    <div class="mt-6 text-sm text-slate-500">
-        <strong>Status:</strong> Draft &nbsp; | &nbsp;
-        <strong>Version:</strong> 1.0
-    </div>
 </header>
 
 <main class="max-w-4xl mx-auto px-6 pb-20">
@@ -56,8 +47,7 @@
         </p>
 
         <p class="mb-6">
-            Rather than optimizing for today's implementation, it should support future
-            growth while remaining simple enough for Version 1.
+            The structure should support future growth while remaining simple enough to maintain today.
         </p>
 
         <p class="font-semibold mb-3">Key principles include:</p>
@@ -87,274 +77,121 @@
     </section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">4. Repository Structure</h2>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>salvagecars/
-
-README.md
-
-docs/
-
-public/
-
-firebase.json
-
-.firebaserc</code></pre>
-
-        <p class="mt-4">
-            Version 1 intentionally keeps the top level simple.
-        </p>
-    </section>
-
-    <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">5. Documentation</h2>
-
-        <p class="mb-4">
-            The <code class="bg-slate-200 px-1.5 py-0.5 rounded">/docs</code>
-            directory contains internal project documentation.
-        </p>
-
-        <p class="mb-3">Examples include:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>vision.md
-
-product-architecture.md
-
-site-structure-navigation.md
-
-repository-architecture.md
-
-design-system.md
-
-content-standards.md
-
-question-map.md
-
-roadmap.md
-
-decision-log.md</code></pre>
-
-        <p class="mt-4">
-            These documents describe the platform rather than the implementation.
-        </p>
-
-        <p class="mt-2">
-            They are versioned alongside the source code.
-        </p>
-    </section>
+<h2 class="text-2xl font-bold mb-4">4. Repository Structure</h2>
+<p class="mb-4">The repository separates internal working documents, public website files, and maintenance scripts. The following tree shows the major verified locations; hidden configuration files and any additional local files are not exhaustively represented.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>salvagecars/
+├── README.md
+├── firebase.json
+├── docs/
+│   ├── design-system.html
+│   ├── site-structure-user-nav.html
+│   ├── repository-architecture.html
+│   ├── state-page-template.html
+│   ├── page-templates.html
+│   └── state-page-content-model.html
+├── public/
+│   ├── index.html
+│   ├── questions/
+│   ├── states/
+│   ├── guides/
+│   ├── vision/
+│   ├── architecture/
+│   ├── privacy/
+│   ├── terms/
+│   └── assets/
+├── audit-state-pages.py
+├── check-question-navigation.py
+└── audit-site-links.py</code></pre><p class="mb-4">Firebase Hosting deploys the <code>public/</code> directory, as configured in <code>firebase.json</code>.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">6. Public Website</h2>
-
-        <p class="mb-4">
-            The <code class="bg-slate-200 px-1.5 py-0.5 rounded">/public</code>
-            directory contains all assets deployed to Firebase Hosting.
-        </p>
-
-        <p class="mb-3">Examples include:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>index.html
-
-about/
-
-guides/
-
-states/
-
-tools/
-
-categories/
-
-legal/
-
-assets/</code></pre>
-
-        <p class="mt-4">
-            Only files intended for public deployment belong here.
-        </p>
-    </section>
+<h2 class="text-2xl font-bold mb-4">5. Documentation</h2>
+<p class="mb-4">The <code>docs/</code> directory contains internal project documentation that is kept in the repository but not deployed as part of the public website.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>docs/
+├── design-system.html
+├── site-structure-user-nav.html
+├── repository-architecture.html
+├── state-page-template.html
+├── page-templates.html
+└── state-page-content-model.html</code></pre><p class="mb-4">Separately, the website publishes the Vision and Architecture documents under <code>public/vision/</code> and <code>public/architecture/</code>.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">7. Assets</h2>
-
-        <p class="mb-4">
-            Reusable assets should remain centralized.
-        </p>
-
-        <p class="mb-3">Examples include:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>assets/
-
-css/
-
-js/
-
-images/
-
-icons/
-
-logos/
-
-downloads/</code></pre>
-
-        <p class="mt-4">
-            Assets should not be duplicated across pages.
-        </p>
-    </section>
+<h2 class="text-2xl font-bold mb-4">6. Public Website</h2>
+<p class="mb-4">The <code>public/</code> directory contains the website files deployed to Firebase Hosting.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>public/
+├── index.html
+├── questions/
+├── states/
+├── guides/
+├── vision/
+├── architecture/
+├── privacy/
+├── terms/
+└── assets/
+    ├── css/
+    ├── images/
+    └── js/</code></pre><p class="mb-4">The homepage contains the State Guidance directory; the individual jurisdiction pages and seven question journeys have their own directories.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">8. Guides</h2>
-
-        <p class="mb-4">
-            Guide content belongs in:
-        </p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 overflow-x-auto text-sm"><code>public/guides/</code></pre>
-
-        <p class="mt-4 mb-4">
-            Each guide should have its own directory.
-        </p>
-
-        <p class="mb-3">Example:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>guides/
-
-how-to-buy-salvage-cars/
-
-index.html</code></pre>
-
-        <p class="mt-4">
-            This supports clean URLs.
-        </p>
-    </section>
+<h2 class="text-2xl font-bold mb-4">7. Assets</h2>
+<p class="mb-4">The current <code>public/assets/</code> directory has <code>css/</code>, <code>images/</code>, and <code>js/</code> subdirectories. In the supplied website snapshot, these contain placeholder <code>.gitkeep</code> files rather than a developed shared asset library.</p><p class="mb-4">Reusable assets can be centralized here as the site evolves. Avoid creating extra asset directories without a practical need.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">9. State Guidance</h2>
-
-        <p class="mb-4">
-            State content belongs in:
-        </p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 overflow-x-auto text-sm"><code>public/states/</code></pre>
-
-        <p class="mt-4 mb-4">
-            Each state should receive its own directory.
-        </p>
-
-        <p class="mb-3">Example:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>states/
-
-new-hampshire/
-
-index.html</code></pre>
-
-        <p class="mt-4">
-            The State Guidance Center serves as the entry point for all state information.
-        </p>
-    </section>
+<h2 class="text-2xl font-bold mb-4">8. Guides</h2>
+<p class="mb-4">Educational guides live under <code>public/guides/</code>. The directory includes a guide index and a separate <code>index.html</code> for each guide.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>public/guides/
+├── index.html
+├── how-to-buy-a-salvage-car/index.html
+├── what-is-a-salvage-car/index.html
+├── is-a-salvage-car-worth-it/index.html
+└── state-and-auction-terms/index.html</code></pre><p class="mb-4">This structure supports readable URLs and allows the guide library to grow by topic.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">10. Tools</h2>
-
-        <p class="mb-4">
-            Interactive tools belong in:
-        </p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 overflow-x-auto text-sm"><code>public/tools/</code></pre>
-
-        <p class="mt-4 mb-3">Examples include:</p>
-
-        <ul class="list-disc ml-8 space-y-2">
-            <li>Repair Calculator</li>
-            <li>Auction Fee Calculator</li>
-            <li>ROI Calculator</li>
-            <li>VIN Resources</li>
-        </ul>
-    </section>
+<h2 class="text-2xl font-bold mb-4">9. State Guidance</h2>
+<p class="mb-4">Jurisdiction guidance lives in <code>public/states/</code>, with a separate directory and <code>index.html</code> for each of the 50 states and the District of Columbia.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>public/states/
+├── new-hampshire/index.html
+├── california/index.html
+├── district-of-columbia/index.html
+└── ... (48 additional jurisdictions)</code></pre><p class="mb-4">The State Guidance directory is on the homepage at <code>/#state-guidance</code>; there is no separate state index page. Question journeys link to relevant sections within jurisdiction pages.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">11. Categories</h2>
-
-        <p class="mb-4">
-            Vehicle categories belong in:
-        </p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 overflow-x-auto text-sm"><code>public/categories/</code></pre>
-
-        <p class="mt-4 mb-3">Examples include:</p>
-
-        <ul class="list-disc ml-8 space-y-2">
-            <li>Cars</li>
-            <li>Trucks</li>
-            <li>SUVs</li>
-            <li>Motorcycles</li>
-        </ul>
-    </section>
+<h2 class="text-2xl font-bold mb-4">10. Question Journeys</h2>
+<p class="mb-4">The seven question journeys live under <code>public/questions/</code>. Each journey has its own directory and <code>index.html</code>.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>public/questions/
+├── can-my-vehicle-be-rebuilt/index.html
+├── before-buying/index.html
+├── back-on-the-road/index.html
+├── out-of-state-vehicles/index.html
+├── selling-or-transferring/index.html
+├── title-brands/index.html
+└── vehicle-inspections/index.html</code></pre><p class="mb-4">Journey pages direct visitors to relevant sections of jurisdiction pages using state-specific anchors. The <code>check-question-navigation.py</code> script validates those links.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">12. Legal</h2>
-
-        <p class="mb-4">
-            Legal documents should remain together.
-        </p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 overflow-x-auto text-sm"><code>public/legal/</code></pre>
-
-        <p class="mt-4 mb-3">Examples include:</p>
-
-        <ul class="list-disc ml-8 space-y-2">
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Affiliate Disclosure</li>
-            <li>Disclaimer</li>
-        </ul>
-    </section>
+<h2 class="text-2xl font-bold mb-4">11. Future Repository Expansion</h2>
+<p class="mb-4">Additional directories may be introduced as corresponding features are developed. Potential examples include interactive tools, vehicle categories, structured data, templates, and further shared assets.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>public/tools/           (potential)
+public/categories/      (potential)
+data/                   (potential)
+templates/              (potential)</code></pre><p class="mb-4">These examples are possibilities, not a description of implemented features or a commitment to particular directory names.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">13. Future Data</h2>
-
-        <p class="mb-4">
-            Version 1 intentionally stores content as HTML.
-        </p>
-
-        <p class="mb-4">
-            Future versions may introduce structured content.
-        </p>
-
-        <p class="mb-3">Possible future directories include:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>data/
-
-templates/
-
-scripts/</code></pre>
-
-        <p class="mt-4">
-            These are intentionally deferred until a clear need exists.
-        </p>
-    </section>
+<h2 class="text-2xl font-bold mb-4">12. Legal and Public Policies</h2>
+<p class="mb-4">The Privacy Policy and Terms of Use are published as independent page directories rather than within a shared <code>public/legal/</code> directory.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>public/privacy/index.html
+public/terms/index.html</code></pre><p class="mb-4">Any additional policy or disclosure pages should be organized according to their actual published URLs.</p>
+</section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">14. Naming Standards</h2>
+<h2 class="text-2xl font-bold mb-4">13. Validation and Maintenance</h2>
+<p class="mb-4">Three scripts in the repository root support ongoing quality checks:</p><ul class="list-disc ml-8 space-y-2 mb-6"><li><code>audit-state-pages.py</code> — checks structural consistency across jurisdiction pages.</li><li><code>check-question-navigation.py</code> — checks question-journey links to jurisdiction sections.</li><li><code>audit-site-links.py</code> — checks internal links and anchors, including obsolete state-index references.</li></ul><p class="mb-4">Validation scripts should remain easy to find and run as content and navigation change. The repository also contains audit reports and working notes, which can be reviewed during a separate cleanup pass.</p>
+</section>
 
-        <p class="mb-4">Directories should:</p>
-
-        <ul class="list-disc ml-8 space-y-2 mb-6">
-            <li>Use lowercase.</li>
-            <li>Use hyphens.</li>
-            <li>Be descriptive.</li>
-            <li>Match public URLs whenever practical.</li>
-        </ul>
-
-        <p class="mb-3">Examples:</p>
-
-        <pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>repair-cost-calculator
-
-state-guidance
-
-how-to-buy-salvage-cars</code></pre>
-    </section>
+    <section class="mb-12">
+<h2 class="text-2xl font-bold mb-4">14. Naming Standards</h2>
+<p class="mb-4">Directories should use lowercase, descriptive names with hyphens between words and should match public URLs where practical.</p><pre class="bg-slate-900 text-slate-100 rounded-xl p-6 overflow-x-auto text-sm"><code>how-to-buy-a-salvage-car
+can-my-vehicle-be-rebuilt
+district-of-columbia</code></pre><p class="mb-4">Use an <code>index.html</code> file within each published page directory to support clean URLs.</p>
+</section>
 
     <section class="mb-12">
         <h2 class="text-2xl font-bold mb-4">15. Evolution Strategy</h2>
