@@ -13,15 +13,6 @@
     <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
         Site Structure &amp; User Navigation
     </h1>
-
-    <p class="text-lg text-slate-600">
-        Internal Design Document
-    </p>
-
-    <div class="mt-6 text-sm text-slate-500">
-        <strong>Status:</strong> Draft &nbsp; | &nbsp;
-        <strong>Version:</strong> 1.0
-    </div>
 </header>
 
 <main class="max-w-4xl mx-auto px-6 pb-20">
@@ -133,220 +124,72 @@ SalvageCars.com is designed around the jobs visitors are trying to accomplish.
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">4. Question Map</h2>
-
-<p class="mb-4">
-The Question Map forms the foundation of the platform.
-Every guide, state page, tool, and calculator should answer one or more specific user questions.
-</p>
-
-<div class="bg-white border rounded-lg p-6 mb-6">
-
-<h3 class="font-bold mb-4">Buying a Salvage Vehicle</h3>
-
-<ul class="list-disc ml-8 space-y-2">
-<li>Should I buy it?</li>
-<li>What damage does it have?</li>
-<li>What will repairs cost?</li>
-<li>What are my state's rules?</li>
-<li>Can I insure it?</li>
-<li>Can I finance it?</li>
-<li>Should I sell it later?</li>
-</ul>
-
-</div>
-
-<div class="bg-white border rounded-lg p-6">
-
-<h3 class="font-bold mb-4">My Vehicle Was Declared a Total Loss</h3>
-
-<ul class="list-disc ml-8 space-y-2">
-<li>What happens now?</li>
-<li>Can I keep the vehicle?</li>
-<li>What is a salvage title?</li>
-<li>Can I rebuild it?</li>
-<li>How do I register it?</li>
-<li>How much is it worth?</li>
-</ul>
-
-</div>
-
+<p class="mb-4">The Question Map connects common visitor questions to the information needed to answer them. Seven question journeys are available today. Each helps visitors select a jurisdiction and navigate to relevant sections of its State Guidance page.</p><ul class="list-disc ml-8 space-y-2 mb-6">
+<li>Can my salvage vehicle be rebuilt? — <a class="text-blue-600 hover:underline" href="/questions/can-my-vehicle-be-rebuilt/">Rebuilding eligibility</a></li>
+<li>What should I know before buying? — <a class="text-blue-600 hover:underline" href="/questions/before-buying/">Before buying</a></li>
+<li>How do I get my vehicle back on the road? — <a class="text-blue-600 hover:underline" href="/questions/back-on-the-road/">Returning to the road</a></li>
+<li>What if I buy a vehicle from another state? — <a class="text-blue-600 hover:underline" href="/questions/out-of-state-vehicles/">Out-of-state vehicles</a></li>
+<li>How do I sell or transfer my vehicle? — <a class="text-blue-600 hover:underline" href="/questions/selling-or-transferring/">Selling or transferring</a></li>
+<li>What do title brands mean? — <a class="text-blue-600 hover:underline" href="/questions/title-brands/">Title brands</a></li>
+<li>When does my vehicle need an inspection? — <a class="text-blue-600 hover:underline" href="/questions/vehicle-inspections/">Vehicle inspections</a></li>
+</ul><p class="mb-4">These journeys complement the broader questions addressed in educational guides. New guides and future tools should continue to answer identifiable visitor questions.</p>
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">5. User Journeys</h2>
-
-<h3 class="text-xl font-semibold mt-6 mb-2">First-Time Buyer</h3>
-
-<ol class="list-decimal ml-8 space-y-2">
-<li>Home</li>
-<li>Buying Guides</li>
-<li>Vehicle Category</li>
-<li>Repair Cost Guidance</li>
-<li>State Guidance</li>
-<li>Auction Education</li>
-<li>Related Resources</li>
-</ol>
-
-<h3 class="text-xl font-semibold mt-8 mb-2">Vehicle Owner</h3>
-
-<ol class="list-decimal ml-8 space-y-2">
-<li>Home</li>
-<li>Understanding Salvage Titles</li>
-<li>State Guidance</li>
-<li>Rebuilt Process</li>
-<li>Selling a Branded Vehicle</li>
-</ol>
-
-<h3 class="text-xl font-semibold mt-8 mb-2">Experienced Rebuilder</h3>
-
-<ol class="list-decimal ml-8 space-y-2">
-<li>Home</li>
-<li>State Guidance</li>
-<li>Inspection Requirements</li>
-<li>Official Forms</li>
-<li>Frequently Asked Questions</li>
-<li>Related Guides</li>
-</ol>
-
+<p class="mb-4">Visitors may arrive through the homepage, a search result, a guide, a question journey, or a jurisdiction page. Navigation should work from any of these entry points.</p><h3 class="text-xl font-semibold mt-6 mb-2">Question-first journey</h3>
+<p class="mb-4">A visitor chooses a question on the homepage, selects their state or the District of Columbia, and follows a link to the relevant section of that jurisdiction's guidance. Each destination uses a state-specific page anchor.</p><h3 class="text-xl font-semibold mt-6 mb-2">State-first journey</h3>
+<p class="mb-4">A visitor uses the <a class="text-blue-600 hover:underline" href="/#state-guidance">State Guidance directory on the homepage</a> to open a jurisdiction page, then reviews its terminology, procedures, official sources, and related next steps.</p><h3 class="text-xl font-semibold mt-6 mb-2">Guide-first journey</h3>
+<p class="mb-4">A visitor opens an <a class="text-blue-600 hover:underline" href="/guides/">educational guide</a>, learns the general concepts, and follows relevant links to jurisdiction-specific requirements or other guidance.</p><p class="mb-4">The goal is not to force visitors through a fixed sequence. Each page should help them complete their current task and discover the next useful resource.</p>
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">6. Site Structure</h2>
-
-<div class="space-y-6">
-
-<div>
-<h3 class="text-xl font-semibold">Home</h3>
-<p>Entry point that helps visitors identify the task they are trying to accomplish.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold">Guides</h3>
-<p>Educational content organized by topic, including buying, auctions, repairs, insurance, titles, selling, and beginner guides.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold">State Guidance Center</h3>
-
-<p>
-The central hub for all state-specific information.
-</p>
-
-<p class="mt-2">
-Version 1 includes official state resources, introductory guidance, and a complete state index.
-Future versions will expand each state with terminology, inspection requirements,
-registration procedures, FAQs, official forms, and related guides.
-</p>
-
-</div>
-
-<div>
-<h3 class="text-xl font-semibold">Categories</h3>
-<p>Vehicle-specific information such as cars, trucks, motorcycles, flood vehicles, theft recovery vehicles, and future EV content.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold">Tools</h3>
-<p>Interactive decision-support resources including calculators and future AI-powered tools.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold">About &amp; Legal</h3>
-<p>Mission, Vision, Architecture, Privacy Policy, Terms of Service, Contact, Editorial Standards, and Corrections Policy.</p>
-</div>
-
-</div>
-
+<h3 class="text-xl font-semibold mt-6 mb-2">Home</h3>
+<p class="mb-4">The homepage introduces the site, presents “What do you need help with?”, provides links to seven question journeys, and includes the State Salvage Vehicle Guidance directory.</p><h3 class="text-xl font-semibold mt-6 mb-2">Questions</h3>
+<p class="mb-4">Seven task-oriented journeys at <code>/questions/</code> connect common questions to relevant sections of the 51 jurisdiction pages. Individual journeys have their own URLs.</p><h3 class="text-xl font-semibold mt-6 mb-2">State Guidance</h3>
+<p class="mb-4">Individual pages at <code>/states/&lt;jurisdiction&gt;/</code> cover all 50 states and the District of Columbia. The directory is on the homepage at <a class="text-blue-600 hover:underline" href="/#state-guidance">/#state-guidance</a>; there is no separate state index page.</p><h3 class="text-xl font-semibold mt-6 mb-2">Guides</h3>
+<p class="mb-4">The <a class="text-blue-600 hover:underline" href="/guides/">guide library</a> currently contains four educational guides, with room to expand into additional buying, rebuilding, selling, and auction topics.</p><h3 class="text-xl font-semibold mt-6 mb-2">Site and policy documents</h3>
+<p class="mb-4">Public pages include the Vision, Architecture, Privacy Policy, and Terms of Use. These describe the site’s purpose, structure, and policies.</p><h3 class="text-xl font-semibold mt-6 mb-2">Future navigation considerations</h3>
+<p class="mb-4">Potential future sections include calculators, other decision-support tools, vehicle categories, search, and marketplace-related discovery features.</p>
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">7. Navigation Standards</h2>
-
-<p class="mb-4">
-Navigation should remain simple, predictable, and task-oriented.
-</p>
-
-<ul class="list-disc ml-8 space-y-2">
-<li>Guides</li>
-<li>State Guidance</li>
-<li>Tools</li>
-<li>About</li>
+<p class="mb-4">Navigation should remain simple, predictable, and task-oriented. The current homepage provides primary links to the guide library and State Guidance, while the seven question links offer direct task-based entry points.</p><ul class="list-disc ml-8 space-y-2 mb-6">
+<li>Use clear link labels that describe the destination or task.</li>
+<li>Keep the homepage State Guidance directory as the single state index.</li>
+<li>Preserve stable jurisdiction URLs and section anchors used by question journeys.</li>
+<li>Provide a clear path back to the homepage and relevant related information.</li>
+<li>Add navigation for new features only when the destinations exist.</li>
 </ul>
-
-<p class="mt-4">
-Future versions may include search, personalization, and saved resources.
-</p>
-
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">8. Homepage Philosophy</h2>
-
-<p class="mb-4">
-The homepage should not attempt to explain everything.
-Its purpose is to help visitors quickly identify what they are trying to accomplish.
-</p>
-
-<h3 class="text-xl font-semibold mb-3">
-How can we help you today?
-</h3>
-
-<ul class="list-disc ml-8 space-y-2">
-<li>I'm buying a salvage vehicle.</li>
-<li>My vehicle was declared a total loss.</li>
-<li>I need my state's requirements.</li>
-<li>I want to estimate repair costs.</li>
-<li>I want to understand title brands.</li>
-<li>I want to learn about salvage auctions.</li>
-</ul>
-
+<p class="mb-4">The homepage should help visitors identify their next step without attempting to explain every aspect of salvage vehicles.</p><p class="mb-4">The current homepage begins with “Making Sense of Salvage Vehicles,” followed by the question-led section “What do you need help with?”. It links to seven question journeys.</p><p class="mb-4">The homepage also contains “State Salvage Vehicle Guidance,” a directory of all 50 states and the District of Columbia, followed by educational guides and an explanation of why SalvageCars.com exists.</p><p class="mb-4">The question journeys and state directory provide complementary paths: visitors can begin with a task or with a jurisdiction.</p>
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">9. Internal Linking Strategy</h2>
-
-<p class="mb-4">
-Every page should function as an entry point.
-Visitors may arrive from search engines rather than the homepage.
-</p>
-
-<p>
-Every page should include:
-</p>
-
-<ul class="list-disc ml-8 space-y-2 mt-4">
-<li>Related Guides</li>
-<li>Related State Information</li>
-<li>Related Tools</li>
-<li>Frequently Asked Questions</li>
-<li>Official Resources</li>
-<li>Suggested Next Steps</li>
+<p class="mb-4">Every page should function as a useful entry point, including for visitors arriving directly from search engines.</p><ul class="list-disc ml-8 space-y-2 mb-6">
+<li>Link to relevant guides, jurisdiction pages, or question journeys when they help answer the reader's next question.</li>
+<li>Use official government sources for state-specific regulatory information.</li>
+<li>Link to specific jurisdiction sections when an appropriate anchor exists.</li>
+<li>Do not require every page to contain every kind of link; choose links that suit the page's purpose.</li>
+<li>Avoid links to planned pages or tools until those destinations exist.</li>
 </ul>
-
 </section>
 
 <section class="mb-12">
-
 <h2 class="text-2xl font-bold mb-4">10. URL Philosophy</h2>
-
-<p class="mb-4">
-URLs should be short, descriptive, stable, and human-readable.
-</p>
-
-<div class="bg-slate-100 rounded-lg p-4 font-mono text-sm space-y-2">
-<div>/guides/how-to-buy-salvage-cars</div>
-<div>/states/new-hampshire</div>
-<div>/tools/repair-cost-calculator</div>
-<div>/categories/flood-vehicles</div>
+<p class="mb-4">URLs should be short, descriptive, stable, and human-readable.</p><div class="bg-slate-100 rounded-lg p-4 font-mono text-sm space-y-2">
+<div>/guides/how-to-buy-a-salvage-car/</div>
+<div>/questions/can-my-vehicle-be-rebuilt/</div>
+<div>/states/new-hampshire/</div>
+<div>/#state-guidance</div>
 </div>
-
 </section>
 
 <section class="mb-12">
